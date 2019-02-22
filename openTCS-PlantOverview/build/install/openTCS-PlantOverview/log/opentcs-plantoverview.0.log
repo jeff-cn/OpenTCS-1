@@ -1,0 +1,12 @@
+[20190221-14:27:37-064] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-19 16:13:35), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
+[20190221-14:27:37-359] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.guing.configuration.CachedConfigurationSource source, org.opentcs.guing.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20190221-14:27:37-425] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module hello org.opentcs.guing.DefaultImportersExportersModule
+[20190221-14:27:37-428] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module hello org.opentcs.guing.DefaultPluginPanelsModule
+[20190221-14:27:37-431] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module hello org.opentcs.guing.PropertySuggestionsModule
+[20190221-14:27:37-435] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module hello org.opentcs.guing.transport.OrderCategorySuggestionsModule
+[20190221-14:27:38-391] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20190221-14:27:42-660] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
+[20190221-14:27:42-661] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
+[20190221-14:27:42-662] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
+[20190221-14:27:42-825] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
+[20190221-14:27:52-764] INFO    AWT-EventQueue-0     o.o.g.application.OpenTCSView.stop()                   : GUI terminating...

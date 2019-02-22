@@ -1,0 +1,233 @@
+[20190219-22:36:52-321] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-19 16:13:35), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
+[20190219-22:36:52-619] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20190219-22:36:52-736] INFO    main                 o.o.kernel.RunKernel.findRegisteredModules()           : Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
+[20190219-22:36:52-740] INFO    main                 o.o.kernel.RunKernel.findRegisteredModules()           : Integrating injection module org.opentcs.kernel.AGVCommAdapterModule
+[20190219-22:36:53-851] WARNING main                 o.o.kernel.DefaultKernelInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20190219-22:36:56-209] INFO    main                 o.o.k.vehicles.VehicleCommAdapterRegistry.<init>()     : Setting up communication adapter factory: org.opentcs.virtualvehicle.AGVCommAdapterFactory
+[20190219-22:36:56-361] INFO    main                 o.o.k.e.rmi.XMLFileUserAccountPersister.loadUserAccounts(): Account data file does not exist, no user accounts available.
+[20190219-22:36:56-677] INFO    main                 o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'MODELLING'
+[20190219-22:36:56-742] INFO    Thread-1             o.e.j.u.log.Log.initialized()                          : Logging initialized @4801ms to org.eclipse.jetty.util.log.Slf4jLog
+[20190219-22:36:56-931] INFO    Thread-1             s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
+[20190219-22:36:56-933] INFO    Thread-1             s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 127.0.0.1:55100
+[20190219-22:36:56-948] INFO    Thread-1             o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
+[20190219-22:36:57-035] INFO    Thread-1             o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
+[20190219-22:36:57-037] INFO    Thread-1             o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
+[20190219-22:36:57-044] INFO    Thread-1             o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 600000ms
+[20190219-22:36:57-126] INFO    Thread-1             o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@360efb0f{HTTP/1.1,[http/1.1]}{127.0.0.1:55100}
+[20190219-22:36:57-128] INFO    Thread-1             o.e.j.server.Server.doStart()                          : Started @5188ms
+[20190219-22:36:57-205] INFO    main                 o.o.kernel.KernelStarter.startKernel()                 : Loaded model named 'unnamed'.
+[20190219-22:36:57-205] INFO    main                 o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'OPERATING'
+[20190219-22:36:57-220] WARNING main                 o.o.k.e.servicewebapi.ServiceWebApi.initialize()       : Encryption disabled, connections will not be secured!
+[20190219-22:36:57-239] INFO    Thread-10            s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
+[20190219-22:36:57-239] INFO    Thread-10            s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 0.0.0.0:55200
+[20190219-22:36:57-240] INFO    Thread-10            o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
+[20190219-22:36:57-245] INFO    Thread-10            o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
+[20190219-22:36:57-246] INFO    Thread-10            o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
+[20190219-22:36:57-246] INFO    Thread-10            o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 660000ms
+[20190219-22:36:57-248] INFO    main                 o.o.k.e.statistics.StatisticsCollector.initialize()    : Logging events to C:\Users\Administrator\Documents\NetBeansProjects\fmssrc-master\openTCS-Kernel\build\install\openTCS-Kernel\.\log\statistics\opentcs-statistics-20190219-223657.txt...
+[20190219-22:36:57-280] INFO    Thread-10            o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@60cb8e17{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
+[20190219-22:36:57-281] INFO    Thread-10            o.e.j.server.Server.doStart()                          : Started @5342ms
+[20190220-10:23:50-238] INFO    kernelExecutor       o.o.k.e.x.orders.XMLTelegramOrderReceiver.terminate()  : Terminating connection listener...
+[20190220-10:23:50-243] INFO    Thread-19            s.e.jetty.EmbeddedJettyServer.extinguish()             : >>> Spark shutting down ...
+[20190220-10:23:50-246] INFO    xmlOrderConnListener o.o.k.e.x.orders.XMLTelegramOrderReceiver$ConnectionListener.run(): Received termination signal.
+[20190220-10:23:50-246] INFO    xmlOrderConnListener o.o.k.e.x.orders.XMLTelegramOrderReceiver$ConnectionListener.run(): Terminated connection listener.
+[20190220-10:23:50-247] INFO    kernelExecutor       o.o.k.e.x.orders.XMLTelegramOrderReceiver.terminate()  : Connection listener thread has terminated.
+[20190220-10:23:50-297] INFO    Thread-19            o.e.j.server.AbstractConnector.doStop()                : Stopped ServerConnector@60cb8e17{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
+[20190220-10:23:50-299] INFO    Thread-19            o.e.j.s.session.HouseKeeper.stopScavenging()           : Stopped scavenging
+[20190220-10:23:50-305] INFO    Thread-19            s.e.jetty.EmbeddedJettyServer.extinguish()             : done
+[20190220-10:23:50-754] INFO    kernelExecutor       o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'MODELLING'
+[20190220-10:23:51-077] INFO    kernelExecutor       o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'OPERATING'
+[20190220-10:23:51-942] SEVERE  kernelExecutor       o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(AbstractPlainDatagramSocketImpl.java:93)
+	at java.net.DatagramSocket.bind(DatagramSocket.java:392)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:242)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:299)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:271)
+	at org.opentcs.virtualvehicle.UDPpositionalserver.<init>(UDPpositionalserver.java:34)
+	at org.opentcs.virtualvehicle.AGVCommAdapter.initialize(AGVCommAdapter.java:157)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.attachAdapterToVehicle(AttachmentManager.java:182)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAdapterToVehicle(AttachmentManager.java:255)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.lambda$autoAttachAllAdapters$0(AttachmentManager.java:262)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAllAdapters(AttachmentManager.java:261)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.initialize(AttachmentManager.java:124)
+	at org.opentcs.kernel.KernelStateOperating.initialize(KernelStateOperating.java:216)
+	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:282)
+	at org.opentcs.kernel.services.StandardPlantModelService.createPlantModel(StandardPlantModelService.java:169)
+	at org.opentcs.kernel.extensions.rmi.StandardRemotePlantModelService.lambda$createPlantModel$0(StandardRemotePlantModelService.java:161)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[20190220-10:23:51-976] SEVERE  kernelExecutor       o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(AbstractPlainDatagramSocketImpl.java:93)
+	at java.net.DatagramSocket.bind(DatagramSocket.java:392)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:242)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:299)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:271)
+	at org.opentcs.virtualvehicle.UDPpositionalserver.<init>(UDPpositionalserver.java:34)
+	at org.opentcs.virtualvehicle.AGVCommAdapter.initialize(AGVCommAdapter.java:157)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.attachAdapterToVehicle(AttachmentManager.java:182)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAdapterToVehicle(AttachmentManager.java:255)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.lambda$autoAttachAllAdapters$0(AttachmentManager.java:262)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAllAdapters(AttachmentManager.java:261)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.initialize(AttachmentManager.java:124)
+	at org.opentcs.kernel.KernelStateOperating.initialize(KernelStateOperating.java:216)
+	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:282)
+	at org.opentcs.kernel.services.StandardPlantModelService.createPlantModel(StandardPlantModelService.java:169)
+	at org.opentcs.kernel.extensions.rmi.StandardRemotePlantModelService.lambda$createPlantModel$0(StandardRemotePlantModelService.java:161)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[20190220-10:23:51-996] SEVERE  kernelExecutor       o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(AbstractPlainDatagramSocketImpl.java:93)
+	at java.net.DatagramSocket.bind(DatagramSocket.java:392)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:242)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:299)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:271)
+	at org.opentcs.virtualvehicle.UDPpositionalserver.<init>(UDPpositionalserver.java:34)
+	at org.opentcs.virtualvehicle.AGVCommAdapter.initialize(AGVCommAdapter.java:157)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.attachAdapterToVehicle(AttachmentManager.java:182)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAdapterToVehicle(AttachmentManager.java:255)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.lambda$autoAttachAllAdapters$0(AttachmentManager.java:262)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAllAdapters(AttachmentManager.java:261)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.initialize(AttachmentManager.java:124)
+	at org.opentcs.kernel.KernelStateOperating.initialize(KernelStateOperating.java:216)
+	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:282)
+	at org.opentcs.kernel.services.StandardPlantModelService.createPlantModel(StandardPlantModelService.java:169)
+	at org.opentcs.kernel.extensions.rmi.StandardRemotePlantModelService.lambda$createPlantModel$0(StandardRemotePlantModelService.java:161)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+[20190220-10:23:52-008] WARNING kernelExecutor       o.o.k.e.servicewebapi.ServiceWebApi.initialize()       : Encryption disabled, connections will not be secured!
+[20190220-10:23:52-013] INFO    kernelExecutor       o.o.k.e.statistics.StatisticsCollector.initialize()    : Logging events to C:\Users\Administrator\Documents\NetBeansProjects\fmssrc-master\openTCS-Kernel\build\install\openTCS-Kernel\.\log\statistics\opentcs-statistics-20190220-102352.txt...
+[20190220-10:23:52-017] INFO    Thread-25            s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
+[20190220-10:23:52-017] INFO    Thread-25            s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 0.0.0.0:55200
+[20190220-10:23:52-018] INFO    Thread-25            o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
+[20190220-10:23:52-026] INFO    Thread-25            o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
+[20190220-10:23:52-026] INFO    Thread-25            o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
+[20190220-10:23:52-027] INFO    Thread-25            o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 600000ms
+[20190220-10:23:52-100] INFO    Thread-25            o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@691b5ea7{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
+[20190220-10:23:52-101] INFO    Thread-25            o.e.j.server.Server.doStart()                          : Started @42420529ms
+[20190220-10:24:18-858] WARNING kernelExecutor       o.o.k.vehicles.DefaultVehicleController.setVehiclePosition(): Vehicle-01: At unknown position point
+[20190220-10:24:45-401] INFO    kernelExecutor       o.o.s.b.dispatching.TransportOrderUtil.updateTransportOrderState(): Updating state of transport order Park-7d1f2ede-8647-4a93-bd82-5e384ae4333c to BEING_PROCESSED...
+[20190220-10:26:30-563] INFO    kernelExecutor       o.o.s.b.dispatching.TransportOrderUtil.updateTransportOrderState(): Updating state of transport order Park-08ac8ddc-05de-4366-88f5-86c2faf89a39 to BEING_PROCESSED...
+[20190220-10:34:13-550] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-19 16:13:35), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
+[20190220-10:34:13-844] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20190220-10:34:13-931] INFO    main                 o.o.kernel.RunKernel.findRegisteredModules()           : Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
+[20190220-10:34:13-951] INFO    main                 o.o.kernel.RunKernel.findRegisteredModules()           : Integrating injection module org.opentcs.kernel.AGVCommAdapterModule
+[20190220-10:34:15-035] WARNING main                 o.o.kernel.DefaultKernelInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20190220-10:34:17-373] INFO    main                 o.o.k.vehicles.VehicleCommAdapterRegistry.<init>()     : Setting up communication adapter factory: org.opentcs.virtualvehicle.AGVCommAdapterFactory
+[20190220-10:34:17-566] INFO    Thread-1             o.e.j.u.log.Log.initialized()                          : Logging initialized @4383ms to org.eclipse.jetty.util.log.Slf4jLog
+[20190220-10:34:17-790] INFO    Thread-1             s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
+[20190220-10:34:17-791] INFO    Thread-1             s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 127.0.0.1:55100
+[20190220-10:34:17-804] INFO    Thread-1             o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
+[20190220-10:34:17-883] INFO    Thread-1             o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
+[20190220-10:34:17-883] INFO    Thread-1             o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
+[20190220-10:34:17-894] INFO    Thread-1             o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 660000ms
+[20190220-10:34:17-962] INFO    Thread-1             o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@8320cf0{HTTP/1.1,[http/1.1]}{127.0.0.1:55100}
+[20190220-10:34:17-964] INFO    Thread-1             o.e.j.server.Server.doStart()                          : Started @4782ms
+[20190220-10:34:17-977] INFO    main                 o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'MODELLING'
+[20190220-10:34:18-614] INFO    main                 o.o.kernel.KernelStarter.startKernel()                 : Loaded model named 'Demo-01'.
+[20190220-10:34:18-615] INFO    main                 o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'OPERATING'
+[20190220-10:34:19-219] SEVERE  main                 o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(AbstractPlainDatagramSocketImpl.java:93)
+	at java.net.DatagramSocket.bind(DatagramSocket.java:392)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:242)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:299)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:271)
+	at org.opentcs.virtualvehicle.UDPpositionalserver.<init>(UDPpositionalserver.java:34)
+	at org.opentcs.virtualvehicle.AGVCommAdapter.initialize(AGVCommAdapter.java:157)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.attachAdapterToVehicle(AttachmentManager.java:182)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAdapterToVehicle(AttachmentManager.java:255)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.lambda$autoAttachAllAdapters$0(AttachmentManager.java:262)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAllAdapters(AttachmentManager.java:261)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.initialize(AttachmentManager.java:124)
+	at org.opentcs.kernel.KernelStateOperating.initialize(KernelStateOperating.java:216)
+	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:282)
+	at org.opentcs.kernel.KernelStarter.startKernel(KernelStarter.java:81)
+	at org.opentcs.kernel.RunKernel.main(RunKernel.java:62)
+
+[20190220-10:34:19-241] SEVERE  main                 o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(AbstractPlainDatagramSocketImpl.java:93)
+	at java.net.DatagramSocket.bind(DatagramSocket.java:392)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:242)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:299)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:271)
+	at org.opentcs.virtualvehicle.UDPpositionalserver.<init>(UDPpositionalserver.java:34)
+	at org.opentcs.virtualvehicle.AGVCommAdapter.initialize(AGVCommAdapter.java:157)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.attachAdapterToVehicle(AttachmentManager.java:182)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAdapterToVehicle(AttachmentManager.java:255)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.lambda$autoAttachAllAdapters$0(AttachmentManager.java:262)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAllAdapters(AttachmentManager.java:261)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.initialize(AttachmentManager.java:124)
+	at org.opentcs.kernel.KernelStateOperating.initialize(KernelStateOperating.java:216)
+	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:282)
+	at org.opentcs.kernel.KernelStarter.startKernel(KernelStarter.java:81)
+	at org.opentcs.kernel.RunKernel.main(RunKernel.java:62)
+
+[20190220-10:34:19-281] SEVERE  main                 o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+java.net.BindException: Address already in use: Cannot bind
+	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
+	at java.net.AbstractPlainDatagramSocketImpl.bind(AbstractPlainDatagramSocketImpl.java:93)
+	at java.net.DatagramSocket.bind(DatagramSocket.java:392)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:242)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:299)
+	at java.net.DatagramSocket.<init>(DatagramSocket.java:271)
+	at org.opentcs.virtualvehicle.UDPpositionalserver.<init>(UDPpositionalserver.java:34)
+	at org.opentcs.virtualvehicle.AGVCommAdapter.initialize(AGVCommAdapter.java:157)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.attachAdapterToVehicle(AttachmentManager.java:182)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAdapterToVehicle(AttachmentManager.java:255)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.lambda$autoAttachAllAdapters$0(AttachmentManager.java:262)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.autoAttachAllAdapters(AttachmentManager.java:261)
+	at org.opentcs.kernel.extensions.controlcenter.vehicles.AttachmentManager.initialize(AttachmentManager.java:124)
+	at org.opentcs.kernel.KernelStateOperating.initialize(KernelStateOperating.java:216)
+	at org.opentcs.kernel.StandardKernel.setState(StandardKernel.java:282)
+	at org.opentcs.kernel.KernelStarter.startKernel(KernelStarter.java:81)
+	at org.opentcs.kernel.RunKernel.main(RunKernel.java:62)
+
+[20190220-10:34:19-286] WARNING main                 o.o.k.e.servicewebapi.ServiceWebApi.initialize()       : Encryption disabled, connections will not be secured!
+[20190220-10:34:19-300] INFO    Thread-15            s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
+[20190220-10:34:19-301] INFO    Thread-15            s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 0.0.0.0:55200
+[20190220-10:34:19-302] INFO    Thread-15            o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
+[20190220-10:34:19-304] INFO    Thread-15            o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
+[20190220-10:34:19-304] INFO    Thread-15            o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
+[20190220-10:34:19-305] INFO    Thread-15            o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 600000ms
+[20190220-10:34:19-316] INFO    main                 o.o.k.e.statistics.StatisticsCollector.initialize()    : Logging events to C:\Users\Administrator\Documents\NetBeansProjects\fmssrc-master\openTCS-Kernel\build\install\openTCS-Kernel\.\log\statistics\opentcs-statistics-20190220-103419.txt...
+[20190220-10:34:19-322] INFO    Thread-15            o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@895ef0b{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
+[20190220-10:34:19-324] INFO    Thread-15            o.e.j.server.Server.doStart()                          : Started @6142ms
