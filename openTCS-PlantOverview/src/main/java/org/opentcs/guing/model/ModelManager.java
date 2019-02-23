@@ -100,6 +100,4 @@ public interface ModelManager {
    * @param portal The kernel client portal.
    */
   void restoreModel(KernelServicePortal portal);
-  
-  
 }

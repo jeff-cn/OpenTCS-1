@@ -1,3 +1,17 @@
 /build/
 /openTCS-Documentation/build/
 /FMS-CommAdapter-AITV/build/
+/openTCS-Strategies-Default/build/
+/openTCS-PlantOverview/build/
+/openTCS-KernelControlCenter/build/
+/openTCS-Kernel/build/
+/openTCS-Documentation/build/
+/openTCS-Common/build/
+/openTCS-CommAdapter-Loopback/build/
+/openTCS-API-Injection/build/
+/openTCS-API-Base/build/
+/buildSrc/
+/config/
+/.nb-gradle/
+/.settings/
+/.gradle/

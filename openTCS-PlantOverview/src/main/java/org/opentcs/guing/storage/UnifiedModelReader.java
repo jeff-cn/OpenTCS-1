@@ -8,6 +8,8 @@
  */
 package org.opentcs.guing.storage;
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,7 +17,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.nio.charset.Charset;
-import java.time.Instant;
 import java.util.HashSet;
 import java.util.Map;
 import static java.util.Objects.requireNonNull;
@@ -25,7 +26,8 @@ import java.util.stream.Collectors;
 import javax.inject.Inject;
 import javax.inject.Provider;
 import javax.swing.filechooser.FileFilter;
-import org.opentcs.custom.plantoverview.PlantModelCreationFactory;
+import org.opentcs.guing.Dao.PlantModelTODao;
+import org.opentcs.guing.application.DbModule;
 import org.opentcs.guing.application.StatusPanel;
 import org.opentcs.guing.components.properties.type.KeyValueProperty;
 import org.opentcs.guing.components.properties.type.Property;
@@ -110,8 +112,11 @@ public class UnifiedModelReader
     PlantModelTO plantModel;
     try (Reader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file),
                                                                   Charset.forName("UTF-8")))) {
+      
+    final Injector injector2s = Guice.createInjector(new DbModule());
+		final PlantModelTODao dao = injector2s.getInstance(PlantModelTODao.class);
+		LOG.info("Init success {}", dao.getObject().getName());
       plantModel = PlantModelTO.fromXml(reader);
-//        plantModel = PlantModelCreationFactory.getInstance().getPlantModelCreationTO();
     }
 
     plantModel.getProperties().stream()

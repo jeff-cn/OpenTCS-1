@@ -231,8 +231,11 @@ public class OpenTCSModelManager
 
   @Override
   public boolean loadModel(@Nullable File modelFile) {
-    File file = new File("C:\\Users\\Administrator\\Desktop\\Demo-01-demo.xml");
-    
+    File file = modelFile != null ? modelFile : showOpenDialog();
+    if (file == null) {
+      return false;
+    }
+
     FileFilter chosenFileFilter = modelReaderFileChooser.getFileFilter();
     return loadModel(file, modelReaderFilter.get(chosenFileFilter));
   }
