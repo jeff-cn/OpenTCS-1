@@ -15,8 +15,6 @@ import java.util.ServiceLoader;
 import org.opentcs.customizations.ConfigurableInjectionModule;
 import org.opentcs.customizations.ConfigurationBindingProvider;
 import org.opentcs.customizations.plantoverview.PlantOverviewInjectionModule;
-import org.opentcs.guing.Dao.PlantModelTODao;
-import org.opentcs.guing.application.DbModule;
 import org.opentcs.guing.application.PlantOverviewStarter;
 import org.opentcs.guing.configuration.DefaultConfigurationBindingProvider;
 import org.opentcs.util.Environment;
@@ -65,9 +63,9 @@ public class RunPlantOverview {
 		final Injector injector = Guice.createInjector(customConfigurationModule());
 		injector.getInstance(PlantOverviewStarter.class).startPlantOverview();
 
-//		final Injector injector2s = Guice.createInjector(new DbModule());
-//		final PlantModelTODao dao = injector2s.getInstance(PlantModelTODao.class);
-//		LOG.info("Init success {}", dao.getObject().getName());
+		//		final Injector injector2s = Guice.createInjector(new DbModule());
+		//		final PlantModelTODao dao = injector2s.getInstance(PlantModelTODao.class);
+		//		LOG.info("Init success {}", dao.getObject().getName());
 	}
 
 	/**
