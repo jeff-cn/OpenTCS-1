@@ -1,81 +1,33 @@
-[20190219-22:37:58-359] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-19 16:13:35), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
-[20190219-22:37:58-649] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.kernelcontrolcenter.configuration.CachedConfigurationSource source, org.opentcs.kernelcontrolcenter.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
-[20190219-22:37:58-716] INFO    main                 o.o.kernelcontrolcenter.RunKernelControlCenter.findRegisteredModules(): Integrating injection module org.opentcs.kernelcontrolcenter.DefaultKernelControlCenterExtensionsModule
-[20190219-22:37:58-719] INFO    main                 o.o.kernelcontrolcenter.RunKernelControlCenter.findRegisteredModules(): Integrating injection module org.opentcs.kernelcontrolcenter.LoopbackCommAdapterPanelsModule
-[20190219-22:37:59-906] WARNING main                 o.o.kernelcontrolcenter.DefaultKernelControlCenterInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
-[20190219-22:38:01-890] INFO    main                 o.o.kernelcontrolcenter.KernelControlCenterApplication.online(): Switching application state to online...
-[20190220-10:33:49-129] WARNING org.opentcs.kernelcontrolcenter.exchange.KernelEventFetcher-fetcherTask o.o.k.exchange.DefaultServiceCallWrapper.call()        : Failed to call remote service method: org.opentcs.kernelcontrolcenter.exchange.KernelEventFetcher$EventFetcherTask$$Lambda$40/352050657@1a31b808
+[20190224-07:39:54-705] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-24 07:37:41), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
+[20190224-07:39:55-031] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.kernelcontrolcenter.configuration.CachedConfigurationSource source, org.opentcs.kernelcontrolcenter.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20190224-07:39:55-097] INFO    main                 o.o.kernelcontrolcenter.RunKernelControlCenter.findRegisteredModules(): Integrating injection module org.opentcs.kernelcontrolcenter.DefaultKernelControlCenterExtensionsModule
+[20190224-07:39:55-101] INFO    main                 o.o.kernelcontrolcenter.RunKernelControlCenter.findRegisteredModules(): Integrating injection module org.opentcs.kernelcontrolcenter.LoopbackCommAdapterPanelsModule
+[20190224-07:39:56-367] WARNING main                 o.o.kernelcontrolcenter.DefaultKernelControlCenterInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20190224-07:39:58-574] INFO    main                 o.o.kernelcontrolcenter.KernelControlCenterApplication.online(): Switching application state to online...
+[20190224-07:42:00-002] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-24 07:37:41), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
+[20190224-07:42:00-321] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.kernelcontrolcenter.configuration.CachedConfigurationSource source, org.opentcs.kernelcontrolcenter.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20190224-07:42:00-388] INFO    main                 o.o.kernelcontrolcenter.RunKernelControlCenter.findRegisteredModules(): Integrating injection module org.opentcs.kernelcontrolcenter.DefaultKernelControlCenterExtensionsModule
+[20190224-07:42:00-392] INFO    main                 o.o.kernelcontrolcenter.RunKernelControlCenter.findRegisteredModules(): Integrating injection module org.opentcs.kernelcontrolcenter.LoopbackCommAdapterPanelsModule
+[20190224-07:42:01-643] WARNING main                 o.o.kernelcontrolcenter.DefaultKernelControlCenterInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20190224-07:42:03-742] INFO    main                 o.o.kernelcontrolcenter.KernelControlCenterApplication.online(): Switching application state to online...
+[20190224-07:43:01-769] WARNING AWT-EventQueue-0     o.o.k.exchange.DefaultServiceCallWrapper.call()        : Failed to call remote service method: org.opentcs.kernelcontrolcenter.vehicles.LocalVehicleEntryPool$$Lambda$55/1297058502@7e0b9a9f
 org.opentcs.components.kernel.services.ServiceUnavailableException: Remote service unreachable
 	at org.opentcs.access.rmi.services.AbstractRemoteServiceProxy.findSuitableExceptionFor(AbstractRemoteServiceProxy.java:145)
-	at org.opentcs.access.rmi.services.RemoteKernelServicePortalProxy.fetchEvents(RemoteKernelServicePortalProxy.java:206)
-	at org.opentcs.kernelcontrolcenter.exchange.KernelEventFetcher$EventFetcherTask.lambda$runActualTask$0(KernelEventFetcher.java:190)
+	at org.opentcs.access.rmi.services.RemoteTCSObjectServiceProxy.fetchObjects(RemoteTCSObjectServiceProxy.java:65)
+	at org.opentcs.kernelcontrolcenter.vehicles.LocalVehicleEntryPool.lambda$initialize$0(LocalVehicleEntryPool.java:94)
 	at org.opentcs.kernelcontrolcenter.exchange.DefaultServiceCallWrapper.call(DefaultServiceCallWrapper.java:89)
-	at org.opentcs.kernelcontrolcenter.exchange.KernelEventFetcher$EventFetcherTask.runActualTask(KernelEventFetcher.java:190)
-	at org.opentcs.util.CyclicTask.run(CyclicTask.java:154)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.rmi.UnmarshalException: Error unmarshaling return header; nested exception is: 
-	java.net.SocketException: Connection reset
-	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:236)
-	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:161)
-	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:227)
-	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:179)
-	at com.sun.proxy.$Proxy23.fetchEvents(Unknown Source)
-	at org.opentcs.access.rmi.services.RemoteKernelServicePortalProxy.fetchEvents(RemoteKernelServicePortalProxy.java:203)
-	... 5 more
-Caused by: java.net.SocketException: Connection reset
-	at java.net.SocketInputStream.read(SocketInputStream.java:210)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
-	at java.io.DataInputStream.readByte(DataInputStream.java:265)
-	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:222)
-	... 10 more
-
-[20190220-10:33:49-129] WARNING AWT-EventQueue-0     o.o.k.exchange.DefaultServiceCallWrapper.call()        : Failed to call remote service method: java.util.concurrent.Executors$RunnableAdapter@3d2369
-org.opentcs.components.kernel.services.ServiceUnavailableException: Remote service unreachable
-	at org.opentcs.access.rmi.services.AbstractRemoteServiceProxy.findSuitableExceptionFor(AbstractRemoteServiceProxy.java:145)
-	at org.opentcs.access.rmi.services.RemoteVehicleServiceProxy.enableCommAdapter(RemoteVehicleServiceProxy.java:68)
-	at org.opentcs.kernelcontrolcenter.vehicles.DriverGUI.lambda$enableCommAdapters$13(DriverGUI.java:317)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at org.opentcs.kernelcontrolcenter.exchange.DefaultServiceCallWrapper.call(DefaultServiceCallWrapper.java:89)
-	at org.opentcs.kernelcontrolcenter.exchange.DefaultServiceCallWrapper.call(DefaultServiceCallWrapper.java:111)
-	at org.opentcs.kernelcontrolcenter.vehicles.DriverGUI.enableCommAdapters(DriverGUI.java:317)
-	at org.opentcs.kernelcontrolcenter.vehicles.DriverGUI.enableAllCommAdapters(DriverGUI.java:303)
-	at org.opentcs.kernelcontrolcenter.vehicles.DriverGUI.enableAllMenuItemActionPerformed(DriverGUI.java:583)
-	at org.opentcs.kernelcontrolcenter.vehicles.DriverGUI.access$600(DriverGUI.java:58)
-	at org.opentcs.kernelcontrolcenter.vehicles.DriverGUI$3.actionPerformed(DriverGUI.java:511)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
-	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
-	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:842)
-	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:886)
-	at java.awt.Component.processMouseEvent(Component.java:6539)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
-	at java.awt.Component.processEvent(Component.java:6304)
-	at java.awt.Container.processEvent(Container.java:2239)
-	at java.awt.Component.dispatchEventImpl(Component.java:4889)
-	at java.awt.Container.dispatchEventImpl(Container.java:2297)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
-	at java.awt.Container.dispatchEventImpl(Container.java:2283)
-	at java.awt.Window.dispatchEventImpl(Window.java:2746)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at org.opentcs.kernelcontrolcenter.vehicles.LocalVehicleEntryPool.initialize(LocalVehicleEntryPool.java:94)
+	at org.opentcs.kernelcontrolcenter.vehicles.DriverGUI.initialize(DriverGUI.java:141)
+	at org.opentcs.kernelcontrolcenter.KernelControlCenter.addPanel(KernelControlCenter.java:308)
+	at org.opentcs.kernelcontrolcenter.KernelControlCenter.lambda$addPanels$2(KernelControlCenter.java:303)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
 	at java.awt.EventQueue.access$500(EventQueue.java:97)
 	at java.awt.EventQueue$3.run(EventQueue.java:709)
 	at java.awt.EventQueue$3.run(EventQueue.java:703)
 	at java.security.AccessController.doPrivileged(Native Method)
 	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
-	at java.awt.EventQueue$4.run(EventQueue.java:733)
-	at java.awt.EventQueue$4.run(EventQueue.java:731)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
 	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
 	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
 	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
@@ -88,9 +40,9 @@ Caused by: java.rmi.UnmarshalException: Error unmarshaling return header; nested
 	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:161)
 	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:227)
 	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:179)
-	at com.sun.proxy.$Proxy26.enableCommAdapter(Unknown Source)
-	at org.opentcs.access.rmi.services.RemoteVehicleServiceProxy.enableCommAdapter(RemoteVehicleServiceProxy.java:65)
-	... 47 more
+	at com.sun.proxy.$Proxy26.fetchObjects(Unknown Source)
+	at org.opentcs.access.rmi.services.RemoteTCSObjectServiceProxy.fetchObjects(RemoteTCSObjectServiceProxy.java:62)
+	... 20 more
 Caused by: java.net.SocketException: Connection reset
 	at java.net.SocketInputStream.read(SocketInputStream.java:210)
 	at java.net.SocketInputStream.read(SocketInputStream.java:141)
@@ -98,80 +50,9 @@ Caused by: java.net.SocketException: Connection reset
 	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
 	at java.io.DataInputStream.readByte(DataInputStream.java:265)
 	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:222)
-	... 52 more
+	... 25 more
 
-[20190220-10:33:49-135] WARNING org.opentcs.kernelcontrolcenter.exchange.KernelEventFetcher-fetcherTask o.o.a.r.services.RemoteKernelServicePortalProxy.logout(): Not logged in, doing nothing.
-[20190220-10:33:49-141] WARNING AWT-EventQueue-0     o.o.a.r.services.RemoteKernelServicePortalProxy.logout(): Not logged in, doing nothing.
-[20190220-10:33:58-489] WARNING AWT-EventQueue-0     o.o.k.vehicles.DriverGUI.enableCommAdapters()          : Error enabling comm adapter, canceling
-org.opentcs.components.kernel.services.ServiceUnavailableException: Remote service unreachable
-	at org.opentcs.access.rmi.services.AbstractRemoteServiceProxy.findSuitableExceptionFor(AbstractRemoteServiceProxy.java:145)
-	at org.opentcs.access.rmi.services.RemoteVehicleServiceProxy.enableCommAdapter(RemoteVehicleServiceProxy.java:68)
-	at org.opentcs.kernelcontrolcenter.vehicles.DriverGUI.lambda$enableCommAdapters$13(DriverGUI.java:317)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at org.opentcs.kernelcontrolcenter.exchange.DefaultServiceCallWrapper.call(DefaultServiceCallWrapper.java:89)
-	at org.opentcs.kernelcontrolcenter.exchange.DefaultServiceCallWrapper.call(DefaultServiceCallWrapper.java:111)
-	at org.opentcs.kernelcontrolcenter.vehicles.DriverGUI.enableCommAdapters(DriverGUI.java:317)
-	at org.opentcs.kernelcontrolcenter.vehicles.DriverGUI.enableAllCommAdapters(DriverGUI.java:303)
-	at org.opentcs.kernelcontrolcenter.vehicles.DriverGUI.enableAllMenuItemActionPerformed(DriverGUI.java:583)
-	at org.opentcs.kernelcontrolcenter.vehicles.DriverGUI.access$600(DriverGUI.java:58)
-	at org.opentcs.kernelcontrolcenter.vehicles.DriverGUI$3.actionPerformed(DriverGUI.java:511)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
-	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
-	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:842)
-	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:886)
-	at java.awt.Component.processMouseEvent(Component.java:6539)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
-	at java.awt.Component.processEvent(Component.java:6304)
-	at java.awt.Container.processEvent(Container.java:2239)
-	at java.awt.Component.dispatchEventImpl(Component.java:4889)
-	at java.awt.Container.dispatchEventImpl(Container.java:2297)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
-	at java.awt.Container.dispatchEventImpl(Container.java:2283)
-	at java.awt.Window.dispatchEventImpl(Window.java:2746)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
-	at java.awt.EventQueue.access$500(EventQueue.java:97)
-	at java.awt.EventQueue$3.run(EventQueue.java:709)
-	at java.awt.EventQueue$3.run(EventQueue.java:703)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
-	at java.awt.EventQueue$4.run(EventQueue.java:733)
-	at java.awt.EventQueue$4.run(EventQueue.java:731)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-Caused by: java.rmi.UnmarshalException: Error unmarshaling return header; nested exception is: 
-	java.net.SocketException: Connection reset
-	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:236)
-	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:161)
-	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:227)
-	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:179)
-	at com.sun.proxy.$Proxy26.enableCommAdapter(Unknown Source)
-	at org.opentcs.access.rmi.services.RemoteVehicleServiceProxy.enableCommAdapter(RemoteVehicleServiceProxy.java:65)
-	... 47 more
-Caused by: java.net.SocketException: Connection reset
-	at java.net.SocketInputStream.read(SocketInputStream.java:210)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
-	at java.io.DataInputStream.readByte(DataInputStream.java:265)
-	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:222)
-	... 52 more
-
-[20190220-10:33:58-501] SEVERE  org.opentcs.kernelcontrolcenter.exchange.KernelEventFetcher-fetcherTask o.o.k.exchange.KernelEventFetcher$EventFetcherTask.runActualTask(): Exception fetching events
+[20190224-07:43:01-771] WARNING org.opentcs.kernelcontrolcenter.exchange.KernelEventFetcher-fetcherTask o.o.k.exchange.DefaultServiceCallWrapper.call()        : Failed to call remote service method: org.opentcs.kernelcontrolcenter.exchange.KernelEventFetcher$EventFetcherTask$$Lambda$41/166950997@1307c02d
 org.opentcs.components.kernel.services.ServiceUnavailableException: Remote service unreachable
 	at org.opentcs.access.rmi.services.AbstractRemoteServiceProxy.findSuitableExceptionFor(AbstractRemoteServiceProxy.java:145)
 	at org.opentcs.access.rmi.services.RemoteKernelServicePortalProxy.fetchEvents(RemoteKernelServicePortalProxy.java:206)
@@ -198,38 +79,11 @@ Caused by: java.net.SocketException: Connection reset
 	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:222)
 	... 10 more
 
-[20190220-10:34:02-395] INFO    AWT-EventQueue-0     o.o.kernelcontrolcenter.KernelControlCenterApplication.offline(): Switching application state to offline...
-[20190220-10:36:20-203] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-19 16:13:35), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
-[20190220-10:36:20-496] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.kernelcontrolcenter.configuration.CachedConfigurationSource source, org.opentcs.kernelcontrolcenter.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
-[20190220-10:36:20-560] INFO    main                 o.o.kernelcontrolcenter.RunKernelControlCenter.findRegisteredModules(): Integrating injection module org.opentcs.kernelcontrolcenter.DefaultKernelControlCenterExtensionsModule
-[20190220-10:36:20-564] INFO    main                 o.o.kernelcontrolcenter.RunKernelControlCenter.findRegisteredModules(): Integrating injection module org.opentcs.kernelcontrolcenter.LoopbackCommAdapterPanelsModule
-[20190220-10:36:21-751] WARNING main                 o.o.kernelcontrolcenter.DefaultKernelControlCenterInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
-[20190220-10:36:23-995] INFO    main                 o.o.kernelcontrolcenter.KernelControlCenterApplication.online(): Switching application state to online...
-[20190221-12:48:01-589] WARNING org.opentcs.kernelcontrolcenter.exchange.KernelEventFetcher-fetcherTask o.o.k.exchange.DefaultServiceCallWrapper.call()        : Failed to call remote service method: org.opentcs.kernelcontrolcenter.exchange.KernelEventFetcher$EventFetcherTask$$Lambda$40/701134225@68f77faa
-org.opentcs.components.kernel.services.ServiceUnavailableException: Remote service unreachable
-	at org.opentcs.access.rmi.services.AbstractRemoteServiceProxy.findSuitableExceptionFor(AbstractRemoteServiceProxy.java:145)
-	at org.opentcs.access.rmi.services.RemoteKernelServicePortalProxy.fetchEvents(RemoteKernelServicePortalProxy.java:206)
-	at org.opentcs.kernelcontrolcenter.exchange.KernelEventFetcher$EventFetcherTask.lambda$runActualTask$0(KernelEventFetcher.java:190)
-	at org.opentcs.kernelcontrolcenter.exchange.DefaultServiceCallWrapper.call(DefaultServiceCallWrapper.java:89)
-	at org.opentcs.kernelcontrolcenter.exchange.KernelEventFetcher$EventFetcherTask.runActualTask(KernelEventFetcher.java:190)
-	at org.opentcs.util.CyclicTask.run(CyclicTask.java:154)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.rmi.UnmarshalException: Error unmarshaling return header; nested exception is: 
-	java.net.SocketException: Connection reset
-	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:236)
-	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:161)
-	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:227)
-	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:179)
-	at com.sun.proxy.$Proxy23.fetchEvents(Unknown Source)
-	at org.opentcs.access.rmi.services.RemoteKernelServicePortalProxy.fetchEvents(RemoteKernelServicePortalProxy.java:203)
-	... 5 more
-Caused by: java.net.SocketException: Connection reset
-	at java.net.SocketInputStream.read(SocketInputStream.java:210)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
-	at java.io.DataInputStream.readByte(DataInputStream.java:265)
-	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:222)
-	... 10 more
-
-[20190221-12:48:01-597] WARNING org.opentcs.kernelcontrolcenter.exchange.KernelEventFetcher-fetcherTask o.o.a.r.services.RemoteKernelServicePortalProxy.logout(): Not logged in, doing nothing.
+[20190224-07:43:01-781] WARNING org.opentcs.kernelcontrolcenter.exchange.KernelEventFetcher-fetcherTask o.o.util.CyclicTask.terminateAndWait()                 : Already terminated
+[20190224-07:43:01-782] WARNING org.opentcs.kernelcontrolcenter.exchange.KernelEventFetcher-fetcherTask o.o.a.r.services.RemoteKernelServicePortalProxy.logout(): Not logged in, doing nothing.
+[20190224-07:47:01-442] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-24 07:37:41), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
+[20190224-07:47:01-748] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.kernelcontrolcenter.configuration.CachedConfigurationSource source, org.opentcs.kernelcontrolcenter.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20190224-07:47:01-808] INFO    main                 o.o.kernelcontrolcenter.RunKernelControlCenter.findRegisteredModules(): Integrating injection module org.opentcs.kernelcontrolcenter.DefaultKernelControlCenterExtensionsModule
+[20190224-07:47:01-813] INFO    main                 o.o.kernelcontrolcenter.RunKernelControlCenter.findRegisteredModules(): Integrating injection module org.opentcs.kernelcontrolcenter.LoopbackCommAdapterPanelsModule
+[20190224-07:47:03-022] WARNING main                 o.o.kernelcontrolcenter.DefaultKernelControlCenterInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20190224-07:47:05-025] INFO    main                 o.o.kernelcontrolcenter.KernelControlCenterApplication.online(): Switching application state to online...

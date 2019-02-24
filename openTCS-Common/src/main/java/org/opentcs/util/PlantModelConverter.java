@@ -29,11 +29,12 @@ public final class PlantModelConverter {
 		final List<Block> modelBlocks = model.getBlocks();
 
 		return plantModelTo;
+
 	}
 
 	public static final Model convertPlantModelTOtoDbModel(final PlantModelTO plantModelTo) {
 		final Model model = new Model();
-		model.setId(420);
+//				model.setId(5);
 
 		model.setVersion(plantModelTo.getVersion());
 		model.setName(plantModelTo.getName());
@@ -89,10 +90,10 @@ public final class PlantModelConverter {
 		final Point point = new Point();
 		point.setName(pointTo.getName());
 		point.setType(pointTo.getType());
-		point.setVehicleOrientationAngle(pointTo.getVehicleOrientationAngle());
-		point.setxPosition(pointTo.getxPosition());
-		point.setyPosition(pointTo.getyPosition());
-		point.setzPosition(pointTo.getzPosition());
+		point.setVehicleOrientationAngle(pointTo.getVehicleOrientationAngle().toString());
+		point.setxPosition(pointTo.getxPosition().toString() );
+		point.setyPosition(pointTo.getyPosition().toString());
+		point.setzPosition(pointTo.getzPosition().toString());
 
 		final List<OutgoingPath> outgoingPathsTO = pointTo.getOutgoingPaths();
 		for (final OutgoingPath outgoingPathTO : outgoingPathsTO) {

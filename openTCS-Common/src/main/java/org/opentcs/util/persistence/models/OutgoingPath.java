@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -11,7 +12,8 @@ import javax.persistence.Table;
 public class OutgoingPath {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "outgoingpath_generator")
+	@SequenceGenerator(name = "outgoingpath_generator", sequenceName = "outgoingpath_id_seq")
 	Integer id;
 
 	String name;

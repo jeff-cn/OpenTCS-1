@@ -27,7 +27,7 @@ public class DbModule extends AbstractModule {
 	public EntityManagerFactory provideEntityManagerFactory() {
 		final Map<String, String> properties = new HashMap<String, String>();
 		properties.put("hibernate.connection.driver_class", "org.postgresql.Driver");
-		properties.put("hibernate.connection.url", "jdbc:postgresql:fmsdb");
+		properties.put("hibernate.connection.url", "jdbc:postgresql:fmstest");
 		properties.put("hibernate.connection.username", "postgres");
 		properties.put("hibernate.connection.password", "psql");
 		properties.put("hibernate.connection.pool_size", "1");

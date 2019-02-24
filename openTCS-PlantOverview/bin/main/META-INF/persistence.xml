@@ -37,7 +37,7 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.0">
   <persistence-unit name="db-manager">
   
-    <class>org.opentcs.util.persistence.models.Model</class>
+    <!-- <class>org.opentcs.util.persistence.models.Model</class>
     <class>org.opentcs.util.persistence.models.VisualLayout</class>
     <class>org.opentcs.util.persistence.models.Property</class>
     <class>org.opentcs.util.persistence.models.ModelLayoutElement</class>
@@ -50,7 +50,8 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
     <class>org.opentcs.util.persistence.models.LocationType</class>
     <class>org.opentcs.util.persistence.models.AllowedOperation</class>
     <class>org.opentcs.util.persistence.models.Block</class>
-    <class>org.opentcs.util.persistence.models.Member</class>
+    <class>org.opentcs.util.persistence.models.Member</class> -->
+    <class>org.opentcs.util.persistence.models.XmlModel</class>
     <properties>
       <!-- Disable the second-level cache  -->
       <property name="hibernate.archive.autodetection" value="class, hbm" />
