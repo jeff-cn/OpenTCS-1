@@ -1,15 +1,86 @@
-[20190223-15:31:24-096] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-23 14:17:15), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
-[20190223-15:31:24-409] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.guing.configuration.CachedConfigurationSource source, org.opentcs.guing.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
-[20190223-15:31:24-480] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultImportersExportersModule
-[20190223-15:31:24-481] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.DefaultImportersExportersModule
-[20190223-15:31:24-485] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultPluginPanelsModule
-[20190223-15:31:24-486] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.DefaultPluginPanelsModule
-[20190223-15:31:24-489] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.PropertySuggestionsModule
-[20190223-15:31:24-490] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.PropertySuggestionsModule
-[20190223-15:31:24-494] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.transport.OrderCategorySuggestionsModule
-[20190223-15:31:24-495] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.transport.OrderCategorySuggestionsModule
-[20190223-15:31:25-528] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
-[20190223-15:31:30-030] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
-[20190223-15:31:30-031] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
-[20190223-15:31:30-031] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
-[20190223-15:31:30-209] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
+[20190223-17:43:27-811] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-23 14:17:15), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
+[20190223-17:43:28-113] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.guing.configuration.CachedConfigurationSource source, org.opentcs.guing.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20190223-17:43:28-178] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultImportersExportersModule
+[20190223-17:43:28-179] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.DefaultImportersExportersModule
+[20190223-17:43:28-182] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultPluginPanelsModule
+[20190223-17:43:28-183] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.DefaultPluginPanelsModule
+[20190223-17:43:28-187] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.PropertySuggestionsModule
+[20190223-17:43:28-188] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.PropertySuggestionsModule
+[20190223-17:43:28-192] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.transport.OrderCategorySuggestionsModule
+[20190223-17:43:28-193] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.transport.OrderCategorySuggestionsModule
+[20190223-17:43:29-170] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20190223-17:43:33-365] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
+[20190223-17:43:33-366] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
+[20190223-17:43:33-366] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
+[20190223-17:43:33-518] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
+[20190223-17:43:44-459] INFO    AWT-EventQueue-0     o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
+[20190223-17:43:44-833] INFO    AWT-EventQueue-0     o.hibernate.Version.logVersion()                       : HHH000412: Hibernate Core {5.4.1.Final}
+[20190223-17:43:45-715] INFO    AWT-EventQueue-0     o.h.a.c.r.java.JavaReflectionManager.<clinit>()        : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[20190223-17:43:46-442] WARN    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[20190223-17:43:46-466] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmsdb]
+[20190223-17:43:46-467] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
+[20190223-17:43:46-468] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
+[20190223-17:43:46-481] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
+[20190223-17:43:46-952] INFO    AWT-EventQueue-0     o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[20190223-17:43:46-991] WARN    AWT-EventQueue-0     o.h.dialect.H2Dialect.<init>()                         : HHH000431: Unable to determine H2 database version, certain features may not work
+[20190223-17:43:51-535] INFO    AWT-EventQueue-0     o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@612fe8ac] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[20190223-17:43:51-601] INFO    AWT-EventQueue-0     o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[20190223-17:43:53-038] SEVERE  AWT-EventQueue-0     o.o.u.logging.UncaughtExceptionLogger.uncaughtException(): Unhandled exception
+javax.persistence.PersistenceException: org.hibernate.PersistentObjectException: detached entity passed to persist: org.opentcs.util.persistence.models.Model
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:154)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:188)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:811)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:789)
+	at org.opentcs.guing.Dao.PlantModelTODao.save(PlantModelTODao.java:25)
+	at org.opentcs.guing.Dao.PlantModelTODao.saveInNewTransaction(PlantModelTODao.java:20)
+	at org.opentcs.guing.storage.UnifiedModelReader.deserialize(UnifiedModelReader.java:127)
+	at org.opentcs.guing.storage.OpenTCSModelManager.loadModel(OpenTCSModelManager.java:252)
+	at org.opentcs.guing.storage.OpenTCSModelManager.loadModel(OpenTCSModelManager.java:240)
+	at org.opentcs.guing.application.OpenTCSView.loadModel(OpenTCSView.java:1486)
+	at org.opentcs.guing.application.action.file.LoadModelAction.actionPerformed(LoadModelAction.java:38)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:842)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:886)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Caused by: org.hibernate.PersistentObjectException: detached entity passed to persist: org.opentcs.util.persistence.models.Model
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:127)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:62)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:804)
+	... 47 more
+

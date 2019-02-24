@@ -32,7 +32,7 @@ public class DbModule extends AbstractModule {
 		properties.put("hibernate.connection.password", "psql");
 		properties.put("hibernate.connection.pool_size", "1");
 		properties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
-		properties.put("hibernate.hbm2ddl.auto", "validate");
+		properties.put("hibernate.hbm2ddl.auto", "update");
 		return Persistence.createEntityManagerFactory("db-manager", properties);
 	}
 

@@ -121,10 +121,10 @@ implements ModelReader {
 
 			final Injector injector2s = Guice.createInjector(new DbModule());
 			final PlantModelTODao dao = injector2s.getInstance(PlantModelTODao.class);
-			LOG.info("Init success {}", dao.getObject().getName());
+//			LOG.info("Init success {}", dao.getObject().getName());
 			plantModel = PlantModelTO.fromXml(reader);
 			final Model modelTOSave = PlantModelConverter.convertPlantModelTOtoDbModel(plantModel);
-			dao.save(modelTOSave);
+			dao.saveInNewTransaction(modelTOSave);
 		}
 
 		plantModel.getProperties().stream()

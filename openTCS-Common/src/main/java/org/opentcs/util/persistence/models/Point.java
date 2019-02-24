@@ -1,5 +1,6 @@
 package org.opentcs.util.persistence.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -19,48 +20,45 @@ public class Point {
 
 	String name;
 
-	String xPosition;
-
-	String yPosition;
-
-	String zPosition;
-
-	String vehicleOrientationAngle;
+	private Long xPosition = 0L;
+	private Long yPosition = 0L;
+	private Long zPosition = 0L;
+	private Float vehicleOrientationAngle = 0.0F;
 
 	String type;
 
 	@OneToMany
-	List<OutgoingPath> outGoingPaths;
+	List<OutgoingPath> outGoingPaths = new ArrayList<>();
 
-	public String getxPosition() {
+	public Long getxPosition() {
 		return xPosition;
 	}
 
-	public void setxPosition(final String xPosition) {
+	public void setxPosition(final Long xPosition) {
 		this.xPosition = xPosition;
 	}
 
-	public String getyPosition() {
+	public Long getyPosition() {
 		return yPosition;
 	}
 
-	public void setyPosition(final String yPosition) {
+	public void setyPosition(final Long yPosition) {
 		this.yPosition = yPosition;
 	}
 
-	public String getzPosition() {
+	public Long getzPosition() {
 		return zPosition;
 	}
 
-	public void setzPosition(final String zPosition) {
+	public void setzPosition(final Long zPosition) {
 		this.zPosition = zPosition;
 	}
 
-	public String getVehicleOrientationAngle() {
+	public Float getVehicleOrientationAngle() {
 		return vehicleOrientationAngle;
 	}
 
-	public void setVehicleOrientationAngle(final String vehicleOrientationAngle) {
+	public void setVehicleOrientationAngle(final Float vehicleOrientationAngle) {
 		this.vehicleOrientationAngle = vehicleOrientationAngle;
 	}
 
@@ -86,6 +84,14 @@ public class Point {
 
 	public void setName(final String name) {
 		this.name = name;
+	}
+
+	public List<OutgoingPath> getOutGoingPaths() {
+		return outGoingPaths;
+	}
+
+	public void setOutGoingPaths(final List<OutgoingPath> outGoingPaths) {
+		this.outGoingPaths = outGoingPaths;
 	}
 
 }

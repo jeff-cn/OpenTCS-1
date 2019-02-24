@@ -1,5 +1,6 @@
 package org.opentcs.util.persistence.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -22,25 +23,25 @@ public class Model {
 	String name;
 
 	@OneToMany
-	List<Point> points;
+	List<Point> points = new ArrayList<>();
 
 	@OneToMany
-	List<Path> paths;
+	List<Path> paths = new ArrayList<>();
 
 	@OneToMany
-	List<Vehicle> vehicles;
+	List<Vehicle> vehicles = new ArrayList<>();
 
 	@OneToMany
-	List<LocationType> locationTypes;
+	List<LocationType> locationTypes = new ArrayList<>();
 
 	@OneToMany
-	List<Location> locations;
+	List<Location> locations = new ArrayList<>();
 
 	@OneToMany
-	List<Block> blocks;
+	List<Block> blocks = new ArrayList<>();
 
 	@OneToMany
-	List<VisualLayout> visualLayouts;
+	List<VisualLayout> visualLayouts = new ArrayList<>();
 
 	public Integer getId() {
 		return id;
