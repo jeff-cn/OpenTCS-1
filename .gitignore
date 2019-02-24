@@ -10,6 +10,17 @@
 /openTCS-CommAdapter-Loopback/build/
 /openTCS-API-Injection/build/
 /openTCS-API-Base/build/
+/openTCS-Documentation/bin/
+/FMS-CommAdapter-AITV/bin/
+/openTCS-Strategies-Default/bin/
+/openTCS-PlantOverview/bin/
+/openTCS-KernelControlCenter/bin/
+/openTCS-Kernel/bin/
+/openTCS-Documentation/bin/
+/openTCS-Common/bin/
+/openTCS-CommAdapter-Loopback/bin/
+/openTCS-API-Injection/bin/
+/openTCS-API-Base/bin/
 /buildSrc/
 /config/
 /.nb-gradle/
