@@ -123,9 +123,8 @@ public class UnifiedModelPersistor
       plantModel.toXml(sw);
       String xmlString = sw.toString();
       xmlModel.setXmlData(xmlString);
-      final Model modelTOSave = PlantModelConverter.convertPlantModelTOtoDbModel(plantModel);
       dao.saveInNewTransaction(xmlModel);
-//      plantModel.toXml(writer);
+      plantModel.toXml(writer);
     }
   }
 }

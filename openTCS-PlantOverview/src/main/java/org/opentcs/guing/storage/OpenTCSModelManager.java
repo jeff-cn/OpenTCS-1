@@ -10,9 +10,13 @@
 package org.opentcs.guing.storage;
 
 import com.google.common.base.Strings;
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 import java.awt.geom.Point2D;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.Files;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -50,6 +54,8 @@ import org.opentcs.data.model.Point;
 import org.opentcs.data.model.Vehicle;
 import org.opentcs.data.model.visualization.ModelLayoutElement;
 import org.opentcs.data.model.visualization.VisualLayout;
+import org.opentcs.guing.Dao.PlantModelTODao;
+import org.opentcs.guing.application.DbModule;
 import org.opentcs.guing.application.StatusPanel;
 import org.opentcs.guing.components.drawing.course.Origin;
 import org.opentcs.guing.components.drawing.course.OriginChangeListener;
@@ -81,6 +87,7 @@ import org.opentcs.guing.model.elements.VehicleModel;
 import org.opentcs.guing.util.CourseObjectFactory;
 import org.opentcs.guing.util.ResourceBundleUtil;
 import org.opentcs.guing.util.SynchronizedFileChooser;
+import org.opentcs.util.persistence.models.XmlModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -161,6 +168,8 @@ public class OpenTCSModelManager
    * The file which the current model is loaded from/written to.
    */
   private File currentModelFile;
+  
+  private static final String FILE_TEMP = "C:\\Users\\Administrator\\Desktop\\TEMP\\Demo-01.xml";
 
   /**
    * Creates a new instance.
@@ -231,9 +240,26 @@ public class OpenTCSModelManager
 
   @Override
   public boolean loadModel(@Nullable File modelFile) {
-    File file = new File("");
+    final Injector injector2s = Guice.createInjector(new DbModule());
+    final PlantModelTODao dao = injector2s.getInstance(PlantModelTODao.class);
+
+    final XmlModel xmlModel = dao.getObject();
+    String stringModel = xmlModel.getXmlData();
+
+    File file = new File(FILE_TEMP);
     if (file == null) {
       return false;
+    }
+    try {
+      Files.deleteIfExists(file.toPath());
+
+      file.createNewFile();
+      PrintWriter out = new PrintWriter(FILE_TEMP);
+      out.println(stringModel);
+      out.close();
+    }
+    catch (IOException e) {
+
     }
 
     FileFilter chosenFileFilter = modelReaderFileChooser.getFileFilter();
