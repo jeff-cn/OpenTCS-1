@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -17,6 +19,10 @@ public class OutgoingPath {
 	Integer id;
 
 	String name;
+
+	@ManyToOne
+	@JoinColumn(name = "point_id", referencedColumnName = "id")
+	Point point;
 
 	public Integer getId() {
 		return id;
@@ -32,6 +38,14 @@ public class OutgoingPath {
 
 	public void setName(final String name) {
 		this.name = name;
+	}
+
+	public Point getPoint() {
+		return point;
+	}
+
+	public void setPoint(final Point point) {
+		this.point = point;
 	}
 
 }

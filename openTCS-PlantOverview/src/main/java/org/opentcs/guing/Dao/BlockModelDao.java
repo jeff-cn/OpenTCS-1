@@ -1,7 +1,5 @@
 package org.opentcs.guing.Dao;
 
-import java.util.List;
-
 import javax.persistence.EntityManager;
 
 import org.opentcs.util.persistence.models.Model;
@@ -26,8 +24,8 @@ public class BlockModelDao {
 		entityManager.persist(object);
 	}
 
-	public List<Model> getObject() {
-		return entityManager.createQuery("select e from Model e ", Model.class).getResultList();
+	public Model getObject() {
+		return entityManager.createQuery("select e from Model e ", Model.class).getSingleResult();
 	}
 
 }

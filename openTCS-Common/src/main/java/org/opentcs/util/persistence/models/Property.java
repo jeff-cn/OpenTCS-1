@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -19,6 +21,18 @@ public class Property {
 	String name;
 
 	String value;
+
+	@ManyToOne
+	@JoinColumn(name = "modelLayoutElement_id", referencedColumnName = "id")
+	ModelLayoutElement modelLayoutElement;
+
+	@ManyToOne
+	@JoinColumn(name = "locationType_id", referencedColumnName = "id")
+	LocationType locationType;
+
+	@ManyToOne
+	@JoinColumn(name = "visualLayout_id", referencedColumnName = "id")
+	VisualLayout visualLayout;
 
 	public Integer getId() {
 		return id;
@@ -40,7 +54,31 @@ public class Property {
 		return value;
 	}
 
+	public ModelLayoutElement getModelLayoutElement() {
+		return modelLayoutElement;
+	}
+
+	public void setModelLayoutElement(final ModelLayoutElement modelLayoutElement) {
+		this.modelLayoutElement = modelLayoutElement;
+	}
+
 	public void setValue(final String value) {
 		this.value = value;
+	}
+
+	public LocationType getLocationType() {
+		return locationType;
+	}
+
+	public void setLocationType(final LocationType locationType) {
+		this.locationType = locationType;
+	}
+
+	public VisualLayout getVisualLayout() {
+		return visualLayout;
+	}
+
+	public void setVisualLayout(final VisualLayout visualLayout) {
+		this.visualLayout = visualLayout;
 	}
 }

@@ -1,12 +1,14 @@
 package org.opentcs.util.persistence.models;
 
 import java.util.List;
-import javax.persistence.CascadeType;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -30,8 +32,20 @@ public class Location {
 
 	String type;
 
-	@OneToMany (cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "location", targetEntity = Link.class)
 	List<Link> links;
+
+	@ManyToOne
+	@JoinColumn(name = "model_id", referencedColumnName = "id")
+	Model model;
+
+	public Model getModel() {
+		return model;
+	}
+
+	public void setModel(final Model model) {
+		this.model = model;
+	}
 
 	public Integer getId() {
 		return id;

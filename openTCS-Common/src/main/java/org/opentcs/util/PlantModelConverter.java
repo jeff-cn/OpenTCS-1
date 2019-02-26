@@ -11,6 +11,7 @@ import org.opentcs.util.persistence.binding.PointTO.OutgoingPath;
 import org.opentcs.util.persistence.binding.VisualLayoutTO.ModelLayoutElement;
 import org.opentcs.util.persistence.models.AllowedOperation;
 import org.opentcs.util.persistence.models.Block;
+import org.opentcs.util.persistence.models.Link;
 import org.opentcs.util.persistence.models.Location;
 import org.opentcs.util.persistence.models.LocationType;
 import org.opentcs.util.persistence.models.Member;
@@ -197,56 +198,147 @@ public final class PlantModelConverter {
   }
 	public static final Model convertPlantModelTOtoDbModel(final PlantModelTO plantModelTo) {
 		final Model model = new Model();
-//				model.setId(5);
+        model.setId(1);
 
-		model.setVersion(plantModelTo.getVersion());
-		model.setName(plantModelTo.getName());
+        model.setVersion(plantModelTo.getVersion());
+        model.setName(plantModelTo.getName());
 
-		for (final PointTO pointTO : plantModelTo.getPoints()) {
-			model.getPoints().add(pointTOtoPoint(pointTO));
-		}
+        for (final PointTO pointTO : plantModelTo.getPoints()) {
+            model.getPoints().add(pointTOtoPoint(pointTO));
+        }
 
-		//Setting Up Blocks
-		final List<Block> modelBlocks = new ArrayList<>();
-		final List<Member> modelMembers = new ArrayList<>();
-		plantModelTo.getBlocks().forEach(blockTO -> {
-			final Member member = new Member();
-			member.setName(blockTO.getName());
-			modelMembers.add(member);
-			final Block block = new Block();
-			block.setMembers(modelMembers);
-			block.setName(blockTO.getName());
-			modelBlocks.add(block);
-		});
-		model.setBlocks(modelBlocks);
+        // Setting Up Blocks
+        final List<Block> modelBlocks = new ArrayList<>();
+        final List<Member> modelMembers = new ArrayList<>();
+        plantModelTo.getBlocks().forEach(blockTO -> {
+            final Member member = new Member();
+            member.setName(blockTO.getName());
+            modelMembers.add(member);
+            final Block block = new Block();
+            block.setMembers(modelMembers);
+            block.setName(blockTO.getName());
+            modelBlocks.add(block);
+        });
+        model.setBlocks(modelBlocks);
 
-		//Setting LocationType
-		final List<LocationType> modelLoactionTypes = new ArrayList<>();
-		final List<AllowedOperation> allowedOperationsModel = new ArrayList<>();
-		final List<Property> propertyListForLocationType = new ArrayList<>();
-		final List<LocationTypeTO> plantModelLocationTypeTO = plantModelTo.getLocationTypes();
-		plantModelLocationTypeTO.forEach(locationTypeTo -> {
-			locationTypeTo.getAllowedOperations().forEach(allowedOperation -> {
-				final AllowedOperation allowedOperationForModel = new AllowedOperation();
-				//        allowedOperationForModel.setId(Integer.getInteger(allowedOperation.getId().toString()));
-				allowedOperationForModel.setName(allowedOperation.getName());
-				allowedOperationsModel.add(allowedOperationForModel);
-			});
-			locationTypeTo.getProperties().forEach(toProperty -> {
-				final Property property = new Property();
-				property.setName(toProperty.getName());
-				property.setValue(toProperty.getValue());
-				propertyListForLocationType.add(property);
-			});
-			final LocationType locationType = new LocationType();
-			locationType.setName(locationTypeTo.getName());
-			locationType.setAllowedOperations(allowedOperationsModel);
-			locationType.setProperties(propertyListForLocationType);
-			modelLoactionTypes.add(locationType);
-		});
-		model.setLocationTypes(modelLoactionTypes);
+        // Setting LocationType
+        final List<LocationType> modelLoactionTypes = new ArrayList<>();
+        final List<AllowedOperation> allowedOperationsModel = new ArrayList<>();
+        final List<Property> propertyListForLocationType = new ArrayList<>();
+        final List<LocationTypeTO> plantModelLocationTypeTO = plantModelTo.getLocationTypes();
+        plantModelLocationTypeTO.forEach(locationTypeTo -> {
+            locationTypeTo.getAllowedOperations().forEach(allowedOperation -> {
+                final AllowedOperation allowedOperationForModel = new AllowedOperation();
+                allowedOperationForModel.setName(allowedOperation.getName());
+                allowedOperationsModel.add(allowedOperationForModel);
+            });
+            locationTypeTo.getProperties().forEach(toProperty -> {
+                final Property property = new Property();
+                property.setName(toProperty.getName());
+                property.setValue(toProperty.getValue());
+                propertyListForLocationType.add(property);
+            });
+            final LocationType locationType = new LocationType();
+            locationType.setName(locationTypeTo.getName());
+            locationType.setAllowedOperations(allowedOperationsModel);
+            locationType.setProperties(propertyListForLocationType);
+            modelLoactionTypes.add(locationType);
+        });
+        model.setLocationTypes(modelLoactionTypes);
 
-		return model;
+        // setting up locations
+        List<Link> modelLinks = new ArrayList<>();
+        List<Location> locations = new ArrayList<>();
+        plantModelTo.getLocations().forEach(location -> {
+            Location locationModel = new Location();
+            locationModel.setName(location.getName());
+            locationModel.setxPosition(location.getxPosition().toString());
+            locationModel.setyPosition(location.getyPosition().toString());
+            locationModel.setzPosition(location.getzPosition().toString());
+            locationModel.setType(location.getType());
+            location.getLinks().forEach(link -> {
+                Link modelLink = new Link();
+                modelLink.setPoint(link.getPoint());
+                modelLinks.add(modelLink);
+            });
+            locationModel.setLinks(modelLinks);
+            locations.add(locationModel);
+        });
+        model.setLocations(locations);
+
+        // setting up Paths
+        List<Path> modelPaths = new ArrayList<>();
+        plantModelTo.getPaths().forEach(path -> {
+            Path modelPath = new Path();
+            modelPath.setName(path.getName());
+            modelPath.setSourcePoint(path.getSourcePoint());
+            modelPath.setDestinationPoint(path.getDestinationPoint());
+            modelPath.setLength(path.getLength().toString());
+            modelPath.setRoutingCost(path.getRoutingCost().toString());
+            modelPath.setMaxVelocity(path.getMaxVelocity().toString());
+            modelPath.setMaxReverseVelocity(path.getMaxReverseVelocity().toString());
+            modelPath.setLocked(path.isLocked());
+            modelPaths.add(modelPath);
+        });
+        model.setPaths(modelPaths);
+
+        // setting up vehicles
+        List<Vehicle> modelVehicles = new ArrayList<>();
+        plantModelTo.getVehicles().forEach(vehicle -> {
+            Vehicle modelVehicle = new Vehicle();
+            modelVehicle.setName(vehicle.getName());
+            modelVehicle.setLength(vehicle.getLength().toString());
+            modelVehicle.setEnergyLevelCritical(vehicle.getEnergyLevelCritical().toString());
+            modelVehicle.setEnergyLevelGood(vehicle.getEnergyLevelGood().toString());
+            modelVehicle.setMaxVelocity(Integer.toString(vehicle.getMaxVelocity()));
+            modelVehicle.setType(vehicle.getType());
+            modelVehicles.add(modelVehicle);
+        });
+        model.setVehicles(modelVehicles);
+
+        // setting up VisualLayout
+        List<VisualLayout> visualLayouts = new ArrayList<>();
+            plantModelTo.getVisualLayouts().forEach(visual -> {
+            VisualLayout visualLayout = new VisualLayout();
+            visualLayout.setName(visual.getName());
+            visualLayout.setScaleX(visual.getScaleX().toString());
+            ;
+            visualLayout.setScaleY(visual.getScaleY().toString());
+
+            List<org.opentcs.util.persistence.models.ModelLayoutElement> modelLayoutElements = new ArrayList<>();
+            visual.getModelLayoutElements().forEach(layoutElement -> {
+                org.opentcs.util.persistence.models.ModelLayoutElement modelLayoutElement = new org.opentcs.util.persistence.models.ModelLayoutElement();
+                modelLayoutElement.setVisualizedObjectName(layoutElement.getVisualizedObjectName());
+                modelLayoutElement.setLayer(layoutElement.getLayer().toString());
+
+                List<Property> property = new ArrayList<>();
+                layoutElement.getProperties().forEach(propty -> {
+                    Property modelProperty = new Property();
+                    modelProperty.setName(propty.getName());
+                    modelProperty.setValue(propty.getValue());
+                    property.add(modelProperty);
+                });
+                modelLayoutElement.setProperties(property);
+                modelLayoutElements.add(modelLayoutElement);
+            });
+
+            visualLayout.setModelLayoutElements(modelLayoutElements);
+
+            List<Property> visualLayoutModelProperties = new ArrayList<>();
+            visual.getProperties().forEach(propty -> {
+                Property visualLayoutModelProperty = new Property();
+                visualLayoutModelProperty.setName(propty.getName());
+                visualLayoutModelProperty.setValue(propty.getValue());
+                visualLayoutModelProperties.add(visualLayoutModelProperty);
+            });
+
+            visualLayout.setProperties(visualLayoutModelProperties);
+            visualLayouts.add(visualLayout);
+
+        });
+        model.setVisualLayouts(visualLayouts);
+
+        return model;
 	}
 
 	private static Point pointTOtoPoint(final PointTO pointTo) {

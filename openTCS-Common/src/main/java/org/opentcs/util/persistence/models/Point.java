@@ -2,12 +2,14 @@ package org.opentcs.util.persistence.models;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.CascadeType;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -33,8 +35,12 @@ public class Point {
 
 	String type;
 
-	@OneToMany (cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "point", targetEntity = OutgoingPath.class)
 	List<OutgoingPath> outGoingPaths = new ArrayList<OutgoingPath>();
+
+	@ManyToOne
+	@JoinColumn(name = "model_id", referencedColumnName = "id")
+	Model model;
 
 	public String getxPosition() {
 		return xPosition;
@@ -98,6 +104,14 @@ public class Point {
 
 	public void setName(final String name) {
 		this.name = name;
+	}
+
+	public Model getModel() {
+		return model;
+	}
+
+	public void setModel(final Model model) {
+		this.model = model;
 	}
 
 }

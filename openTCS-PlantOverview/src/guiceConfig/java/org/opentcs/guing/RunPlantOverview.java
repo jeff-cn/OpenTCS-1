@@ -15,10 +15,13 @@ import java.util.ServiceLoader;
 import org.opentcs.customizations.ConfigurableInjectionModule;
 import org.opentcs.customizations.ConfigurationBindingProvider;
 import org.opentcs.customizations.plantoverview.PlantOverviewInjectionModule;
+import org.opentcs.guing.Dao.BlockModelDao;
+import org.opentcs.guing.application.DbModule;
 import org.opentcs.guing.application.PlantOverviewStarter;
 import org.opentcs.guing.configuration.DefaultConfigurationBindingProvider;
 import org.opentcs.util.Environment;
 import org.opentcs.util.logging.UncaughtExceptionLogger;
+import org.opentcs.util.persistence.models.Model;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,11 +29,7 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
 import com.google.inject.util.Modules;
-import java.util.Arrays;
-import org.opentcs.guing.Dao.BlockModelDao;
-import org.opentcs.guing.application.DbModule;
-import org.opentcs.util.persistence.models.Block;
-import org.opentcs.util.persistence.models.Member;
+import org.opentcs.util.persistence.models.Point;
 
 /**
  * The plant overview process's default entry point.
@@ -68,17 +67,19 @@ public class RunPlantOverview {
 		final Injector injector = Guice.createInjector(customConfigurationModule());
 		injector.getInstance(PlantOverviewStarter.class).startPlantOverview();
 
-				final Injector injector2s = Guice.createInjector(new DbModule());
-				final BlockModelDao dao = injector2s.getInstance(BlockModelDao.class);
-//        Block block = new Block();
-//        block.setName("Hello World Blcok");
-//        Member member =new Member();
-//        member.setName("Sample member");
-//        block.setMembers(Arrays.asList(member));
-//        dao.saveInNewTransaction(block);
-//        
-//        
-//				LOG.info("Init success {}", dao.getObject());
+		final Injector injector2s = Guice.createInjector(new DbModule());
+		final BlockModelDao dao = injector2s.getInstance(BlockModelDao.class);
+		//        Block block = new Block();
+		//        block.setName("Hello World Blcok");
+		//        Member member =new Member();
+		//        member.setName("Sample member");
+		//        block.setMembers(Arrays.asList(member));
+		//        dao.saveInNewTransaction(block);
+		//
+		//
+		final Model model = dao.getObject();
+    List<Point> points= model.getPoints();
+		LOG.info("Init success {}", dao.getObject());
 	}
 
 	/**

@@ -2,14 +2,11 @@ package org.opentcs.util.persistence.models;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.CascadeType;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -17,33 +14,31 @@ import javax.persistence.Table;
 public class Model {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "model_generator")
-	@SequenceGenerator(name = "model_generator", sequenceName = "model_id_seq", allocationSize = 1)
 	Integer id;
 
 	String version;
 
 	String name;
 
-	@OneToMany (cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "model", targetEntity = Point.class)
 	List<Point> points = new ArrayList<>();
 
-	@OneToMany (cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "model", targetEntity = Path.class)
 	List<Path> paths = new ArrayList<>();
 
-	@OneToMany (cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "model", targetEntity = Vehicle.class)
 	List<Vehicle> vehicles = new ArrayList<>();
 
-	@OneToMany (cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "model", targetEntity = LocationType.class)
 	List<LocationType> locationTypes = new ArrayList<>();
 
-	@OneToMany (cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "model", targetEntity = Location.class)
 	List<Location> locations = new ArrayList<>();
 
-	@OneToMany (cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "model", targetEntity = Block.class)
 	List<Block> blocks = new ArrayList<>();
 
-	@OneToMany (cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "model", targetEntity = VisualLayout.class)
 	List<VisualLayout> visualLayouts = new ArrayList<>();
 
 	public Integer getId() {

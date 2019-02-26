@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -17,6 +19,10 @@ public class Link {
 	Integer id;
 
 	String point;
+
+	@ManyToOne
+	@JoinColumn(name = "location_id", referencedColumnName = "id")
+	Location location;
 
 	public Integer getId() {
 		return id;
@@ -32,6 +38,14 @@ public class Link {
 
 	public void setPoint(final String point) {
 		this.point = point;
+	}
+
+	public Location getLocation() {
+		return location;
+	}
+
+	public void setLocation(final Location location) {
+		this.location = location;
 	}
 
 }

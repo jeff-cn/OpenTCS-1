@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -31,6 +33,10 @@ public class Path {
 	String maxReverseVelocity;
 
 	Boolean locked;
+
+	@ManyToOne
+	@JoinColumn(name = "model_id", referencedColumnName = "id")
+	Model model;
 
 	public Integer getId() {
 		return id;
@@ -102,6 +108,14 @@ public class Path {
 
 	public void setLocked(final Boolean locked) {
 		this.locked = locked;
+	}
+
+	public Model getModel() {
+		return model;
+	}
+
+	public void setModel(final Model model) {
+		this.model = model;
 	}
 
 }

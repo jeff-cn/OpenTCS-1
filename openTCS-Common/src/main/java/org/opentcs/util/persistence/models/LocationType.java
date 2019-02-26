@@ -1,12 +1,14 @@
 package org.opentcs.util.persistence.models;
 
 import java.util.List;
-import javax.persistence.CascadeType;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -22,12 +24,15 @@ public class LocationType {
 
 	String name;
 
-	@OneToMany (cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "locationType", targetEntity = AllowedOperation.class)
 	List<AllowedOperation> allowedOperations;
 
-	@OneToMany (cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "locationType", targetEntity = Property.class)
 	List<Property> properties;
 
+	@ManyToOne
+	@JoinColumn(name = "model_id", referencedColumnName = "id")
+	Model model;
 	public Integer getId() {
 		return id;
 	}
@@ -58,6 +63,14 @@ public class LocationType {
 
 	public void setProperties(final List<Property> properties) {
 		this.properties = properties;
+	}
+
+	public Model getModel() {
+		return model;
+	}
+
+	public void setModel(final Model model) {
+		this.model = model;
 	}
 
 }

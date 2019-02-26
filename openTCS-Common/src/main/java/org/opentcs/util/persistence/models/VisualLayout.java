@@ -1,12 +1,14 @@
 package org.opentcs.util.persistence.models;
 
 import java.util.List;
-import javax.persistence.CascadeType;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -20,10 +22,10 @@ public class VisualLayout {
 	@SequenceGenerator(name = "visual_layout_generator", sequenceName = "visuallayout_id_seq", allocationSize = 1)
 	Integer id;
 
-	@OneToMany (cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "visualLayout", targetEntity = ModelLayoutElement.class)
 	List<ModelLayoutElement> modelLayoutElements;
 
-	@OneToMany (cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "visualLayout", targetEntity = Property.class)
 	List<Property> properties;
 
 	String name;
@@ -31,6 +33,10 @@ public class VisualLayout {
 	String scaleX;
 
 	String scaleY;
+
+	@ManyToOne
+	@JoinColumn(name = "model_id", referencedColumnName = "id")
+	Model model;
 
 	public List<ModelLayoutElement> getModelLayoutElements() {
 		return modelLayoutElements;
@@ -78,6 +84,14 @@ public class VisualLayout {
 
 	public void setProperties(final List<Property> properties) {
 		this.properties = properties;
+	}
+
+	public Model getModel() {
+		return model;
+	}
+
+	public void setModel(final Model model) {
+		this.model = model;
 	}
 
 }
