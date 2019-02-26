@@ -13,7 +13,7 @@ public class Link {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "link_generator")
-	@SequenceGenerator(name = "link_generator", sequenceName = "link_id_seq")
+	@SequenceGenerator(name = "link_generator", sequenceName = "link_id_seq", allocationSize = 1)
 	Integer id;
 
 	String point;

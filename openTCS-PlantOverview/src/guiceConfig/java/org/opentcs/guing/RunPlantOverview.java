@@ -26,6 +26,11 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
 import com.google.inject.util.Modules;
+import java.util.Arrays;
+import org.opentcs.guing.Dao.BlockModelDao;
+import org.opentcs.guing.application.DbModule;
+import org.opentcs.util.persistence.models.Block;
+import org.opentcs.util.persistence.models.Member;
 
 /**
  * The plant overview process's default entry point.
@@ -63,9 +68,17 @@ public class RunPlantOverview {
 		final Injector injector = Guice.createInjector(customConfigurationModule());
 		injector.getInstance(PlantOverviewStarter.class).startPlantOverview();
 
-		//		final Injector injector2s = Guice.createInjector(new DbModule());
-		//		final PlantModelTODao dao = injector2s.getInstance(PlantModelTODao.class);
-		//		LOG.info("Init success {}", dao.getObject().getName());
+				final Injector injector2s = Guice.createInjector(new DbModule());
+				final BlockModelDao dao = injector2s.getInstance(BlockModelDao.class);
+//        Block block = new Block();
+//        block.setName("Hello World Blcok");
+//        Member member =new Member();
+//        member.setName("Sample member");
+//        block.setMembers(Arrays.asList(member));
+//        dao.saveInNewTransaction(block);
+//        
+//        
+//				LOG.info("Init success {}", dao.getObject());
 	}
 
 	/**

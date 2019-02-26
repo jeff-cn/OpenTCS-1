@@ -13,7 +13,7 @@ public class Property {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "property_generator")
-	@SequenceGenerator(name = "property_generator", sequenceName = "property_id_seq")
+	@SequenceGenerator(name = "property_generator", sequenceName = "property_id_seq", allocationSize = 1)
 	Integer id;
 
 	String name;

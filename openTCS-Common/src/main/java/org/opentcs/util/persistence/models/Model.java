@@ -2,6 +2,7 @@ package org.opentcs.util.persistence.models;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CascadeType;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,32 +18,32 @@ public class Model {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "model_generator")
-	@SequenceGenerator(name = "model_generator", sequenceName = "model_id_seq")
+	@SequenceGenerator(name = "model_generator", sequenceName = "model_id_seq", allocationSize = 1)
 	Integer id;
 
 	String version;
 
 	String name;
 
-	@OneToMany
+	@OneToMany (cascade = CascadeType.ALL)
 	List<Point> points = new ArrayList<>();
 
-	@OneToMany
+	@OneToMany (cascade = CascadeType.ALL)
 	List<Path> paths = new ArrayList<>();
 
-	@OneToMany
+	@OneToMany (cascade = CascadeType.ALL)
 	List<Vehicle> vehicles = new ArrayList<>();
 
-	@OneToMany
+	@OneToMany (cascade = CascadeType.ALL)
 	List<LocationType> locationTypes = new ArrayList<>();
 
-	@OneToMany
+	@OneToMany (cascade = CascadeType.ALL)
 	List<Location> locations = new ArrayList<>();
 
-	@OneToMany
+	@OneToMany (cascade = CascadeType.ALL)
 	List<Block> blocks = new ArrayList<>();
 
-	@OneToMany
+	@OneToMany (cascade = CascadeType.ALL)
 	List<VisualLayout> visualLayouts = new ArrayList<>();
 
 	public Integer getId() {

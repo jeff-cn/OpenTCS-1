@@ -1,6 +1,8 @@
 package org.opentcs.util.persistence.models;
 
 import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,13 +17,14 @@ import javax.persistence.Table;
 public class Block {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "block_generator")
-	@SequenceGenerator(name = "block_generator", sequenceName = "block_id_seq")
+  @Column(name = "id", unique = true, nullable = false, insertable=false)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "block_generator")
+	@SequenceGenerator(name = "block_generator", sequenceName = "block_id_seq", allocationSize = 1)
 	Integer id;
 
 	String name;
 
-	@OneToMany
+	@OneToMany (cascade = CascadeType.ALL)
 	List<Member> members;
 
 	public List<Member> getMembers() {

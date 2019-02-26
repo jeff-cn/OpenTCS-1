@@ -27,12 +27,12 @@ public class DbModule extends AbstractModule {
 	public EntityManagerFactory provideEntityManagerFactory() {
 		final Map<String, String> properties = new HashMap<String, String>();
 		properties.put("hibernate.connection.driver_class", "org.postgresql.Driver");
-		properties.put("hibernate.connection.url", "jdbc:postgresql:fmstest");
+		properties.put("hibernate.connection.url", "jdbc:postgresql:fmsfinaldb");
 		properties.put("hibernate.connection.username", "postgres");
 		properties.put("hibernate.connection.password", "psql");
 		properties.put("hibernate.connection.pool_size", "1");
-		properties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
-		properties.put("hibernate.hbm2ddl.auto", "update");
+		properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+		properties.put("hibernate.hbm2ddl.auto", "validate");
 		return Persistence.createEntityManagerFactory("db-manager", properties);
 	}
 

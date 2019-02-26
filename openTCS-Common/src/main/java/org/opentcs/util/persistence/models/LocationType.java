@@ -1,6 +1,7 @@
 package org.opentcs.util.persistence.models;
 
 import java.util.List;
+import javax.persistence.CascadeType;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,15 +17,15 @@ public class LocationType {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "locationtype_generator")
-	@SequenceGenerator(name = "locationtype_generator", sequenceName = "locationtype_id_seq")
+	@SequenceGenerator(name = "locationtype_generator", sequenceName = "locationtype_id_seq", allocationSize = 1)
 	Integer id;
 
 	String name;
 
-	@OneToMany
+	@OneToMany (cascade = CascadeType.ALL)
 	List<AllowedOperation> allowedOperations;
 
-	@OneToMany
+	@OneToMany (cascade = CascadeType.ALL)
 	List<Property> properties;
 
 	public Integer getId() {

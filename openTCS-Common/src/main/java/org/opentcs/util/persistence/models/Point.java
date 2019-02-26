@@ -2,6 +2,7 @@ package org.opentcs.util.persistence.models;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CascadeType;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +18,7 @@ public class Point {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "point_generator")
-	@SequenceGenerator(name = "point_generator", sequenceName = "point_id_seq")
+	@SequenceGenerator(name = "point_generator", sequenceName = "point_id_seq", allocationSize = 1)
 	Integer id;
 
 	String name;
@@ -32,7 +33,7 @@ public class Point {
 
 	String type;
 
-	@OneToMany
+	@OneToMany (cascade = CascadeType.ALL)
 	List<OutgoingPath> outGoingPaths = new ArrayList<OutgoingPath>();
 
 	public String getxPosition() {

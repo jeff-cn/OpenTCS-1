@@ -1,6 +1,7 @@
 package org.opentcs.util.persistence.models;
 
 import java.util.List;
+import javax.persistence.CascadeType;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,7 +17,7 @@ public class Location {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "location_generator")
-	@SequenceGenerator(name = "location_generator", sequenceName = "location_id_seq")
+	@SequenceGenerator(name = "location_generator", sequenceName = "location_id_seq", allocationSize = 1)
 	Integer id;
 
 	String name;
@@ -29,7 +30,7 @@ public class Location {
 
 	String type;
 
-	@OneToMany
+	@OneToMany (cascade = CascadeType.ALL)
 	List<Link> links;
 
 	public Integer getId() {

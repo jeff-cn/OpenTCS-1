@@ -13,7 +13,7 @@ public class Path {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "path_generator")
-	@SequenceGenerator(name = "path_generator", sequenceName = "path_id_seq")
+	@SequenceGenerator(name = "path_generator", sequenceName = "path_id_seq", allocationSize = 1)
 	Integer id;
 
 	String name;

@@ -1,74 +1,62 @@
-[20190225-10:11:36-443] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-25 09:42:23), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
-[20190225-10:11:36-768] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.guing.configuration.CachedConfigurationSource source, org.opentcs.guing.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
-[20190225-10:11:36-838] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultImportersExportersModule
-[20190225-10:11:36-839] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.DefaultImportersExportersModule
-[20190225-10:11:36-843] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultPluginPanelsModule
-[20190225-10:11:36-844] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.DefaultPluginPanelsModule
-[20190225-10:11:36-847] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.PropertySuggestionsModule
-[20190225-10:11:36-848] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.PropertySuggestionsModule
-[20190225-10:11:36-852] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.transport.OrderCategorySuggestionsModule
-[20190225-10:11:36-853] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.transport.OrderCategorySuggestionsModule
-[20190225-10:11:37-926] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
-[20190225-10:11:55-521] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
-[20190225-10:11:55-525] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
-[20190225-10:11:55-527] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
-[20190225-10:11:55-762] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
-[20190225-10:12:06-048] WARN    AWT-EventQueue-0     o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
-[20190225-10:12:06-083] INFO    AWT-EventQueue-0     o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
-[20190225-10:12:06-512] INFO    AWT-EventQueue-0     o.hibernate.Version.logVersion()                       : HHH000412: Hibernate Core {5.4.1.Final}
-[20190225-10:12:07-476] INFO    AWT-EventQueue-0     o.h.a.c.r.java.JavaReflectionManager.<clinit>()        : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-[20190225-10:12:08-238] WARN    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-[20190225-10:12:08-268] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmstest]
-[20190225-10:12:08-269] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
-[20190225-10:12:08-270] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
-[20190225-10:12:08-284] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
-[20190225-10:12:08-684] INFO    AWT-EventQueue-0     o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-[20190225-10:12:08-728] WARN    AWT-EventQueue-0     o.h.dialect.H2Dialect.<init>()                         : HHH000431: Unable to determine H2 database version, certain features may not work
-[20190225-10:12:12-382] INFO    AWT-EventQueue-0     o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@212b74e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-[20190225-10:12:12-458] INFO    AWT-EventQueue-0     o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[20190225-10:15:42-730] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
-[20190225-10:15:56-621] WARN    AWT-EventQueue-0     o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
-[20190225-10:15:56-622] INFO    AWT-EventQueue-0     o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
-[20190225-10:15:56-716] WARN    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-[20190225-10:15:56-718] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmstest]
-[20190225-10:15:56-718] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
-[20190225-10:15:56-719] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
-[20190225-10:15:56-719] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
-[20190225-10:15:56-760] INFO    AWT-EventQueue-0     o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-[20190225-10:15:56-764] WARN    AWT-EventQueue-0     o.h.dialect.H2Dialect.<init>()                         : HHH000431: Unable to determine H2 database version, certain features may not work
-[20190225-10:15:56-993] INFO    AWT-EventQueue-0     o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@53456eac] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-[20190225-10:15:57-059] INFO    AWT-EventQueue-0     o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[20190225-10:16:07-322] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
-[20190225-10:16:19-495] WARN    AWT-EventQueue-0     o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
-[20190225-10:16:19-496] INFO    AWT-EventQueue-0     o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
-[20190225-10:16:19-586] WARN    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-[20190225-10:16:19-587] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmstest]
-[20190225-10:16:19-588] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
-[20190225-10:16:19-589] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
-[20190225-10:16:19-589] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
-[20190225-10:16:19-629] INFO    AWT-EventQueue-0     o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-[20190225-10:16:19-633] WARN    AWT-EventQueue-0     o.h.dialect.H2Dialect.<init>()                         : HHH000431: Unable to determine H2 database version, certain features may not work
-[20190225-10:16:19-811] INFO    AWT-EventQueue-0     o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7011199f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-[20190225-10:16:19-864] INFO    AWT-EventQueue-0     o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[20190225-10:16:33-733] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "Demo-01" successfully persisted.
-[20190225-10:16:45-717] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "Demo-01" successfully loaded from kernel.
-[20190225-10:18:25-464] WARN    AWT-EventQueue-0     o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
-[20190225-10:18:25-470] INFO    AWT-EventQueue-0     o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
-[20190225-10:18:25-562] WARN    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-[20190225-10:18:25-563] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmstest]
-[20190225-10:18:25-564] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
-[20190225-10:18:25-564] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
-[20190225-10:18:25-565] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
-[20190225-10:18:25-617] INFO    AWT-EventQueue-0     o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-[20190225-10:18:25-621] WARN    AWT-EventQueue-0     o.h.dialect.H2Dialect.<init>()                         : HHH000431: Unable to determine H2 database version, certain features may not work
-[20190225-10:18:25-869] INFO    AWT-EventQueue-0     o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@67791154] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-[20190225-10:18:25-935] INFO    AWT-EventQueue-0     o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[20190225-10:18:32-013] SEVERE  AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : An error occurred while saving the model. The model was not saved.
-[20190225-10:18:32-013] WARNING AWT-EventQueue-0     o.o.g.storage.OpenTCSModelManager.persistModel()       : Exception persisting model
-java.io.IOException: Exception marshalling data
-	at org.opentcs.util.persistence.binding.PlantModelTO.toXml(PlantModelTO.java:180)
-	at org.opentcs.guing.storage.UnifiedModelPersistor.writeFile(UnifiedModelPersistor.java:123)
-	at org.opentcs.guing.storage.UnifiedModelPersistor.serialize(UnifiedModelPersistor.java:99)
+[20190226-12:51:35-498] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-25 09:42:23), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
+[20190226-12:51:35-882] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.guing.configuration.CachedConfigurationSource source, org.opentcs.guing.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20190226-12:51:35-968] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultImportersExportersModule
+[20190226-12:51:35-969] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.DefaultImportersExportersModule
+[20190226-12:51:35-973] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultPluginPanelsModule
+[20190226-12:51:35-978] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.DefaultPluginPanelsModule
+[20190226-12:51:35-983] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.PropertySuggestionsModule
+[20190226-12:51:35-984] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.PropertySuggestionsModule
+[20190226-12:51:35-988] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.transport.OrderCategorySuggestionsModule
+[20190226-12:51:35-988] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.transport.OrderCategorySuggestionsModule
+[20190226-12:51:37-130] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20190226-12:51:53-014] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
+[20190226-12:51:53-015] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
+[20190226-12:51:53-016] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
+[20190226-12:51:53-183] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
+[20190226-12:51:58-523] WARN    main                 o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
+[20190226-12:51:58-556] INFO    main                 o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
+[20190226-12:51:58-960] INFO    main                 o.hibernate.Version.logVersion()                       : HHH000412: Hibernate Core {5.4.1.Final}
+[20190226-12:51:59-942] INFO    main                 o.h.a.c.r.java.JavaReflectionManager.<clinit>()        : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[20190226-12:52:00-731] WARN    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[20190226-12:52:00-758] INFO    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmsfinaldb]
+[20190226-12:52:00-760] INFO    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
+[20190226-12:52:00-760] INFO    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
+[20190226-12:52:00-775] INFO    main                 o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
+[20190226-12:52:01-210] INFO    main                 o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[20190226-12:52:04-100] WARN    AWT-EventQueue-0     o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
+[20190226-12:52:04-101] INFO    AWT-EventQueue-0     o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
+[20190226-12:52:04-267] WARN    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[20190226-12:52:04-274] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmsfinaldb]
+[20190226-12:52:04-278] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
+[20190226-12:52:04-284] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
+[20190226-12:52:04-290] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
+[20190226-12:52:04-346] INFO    AWT-EventQueue-0     o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[20190226-12:52:06-821] INFO    AWT-EventQueue-0     o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4f26349] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[20190226-12:52:06-821] INFO    main                 o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@70cf7d1e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[20190226-12:52:06-911] INFO    AWT-EventQueue-0     o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[20190226-12:52:06-911] INFO    main                 o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[20190226-12:52:16-049] WARN    AWT-EventQueue-0     o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
+[20190226-12:52:16-049] INFO    AWT-EventQueue-0     o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
+[20190226-12:52:16-172] WARN    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[20190226-12:52:16-173] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmsfinaldb]
+[20190226-12:52:16-174] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
+[20190226-12:52:16-174] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
+[20190226-12:52:16-175] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
+[20190226-12:52:16-218] INFO    AWT-EventQueue-0     o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[20190226-12:52:16-569] INFO    AWT-EventQueue-0     o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@141ab423] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[20190226-12:52:16-628] INFO    AWT-EventQueue-0     o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[20190226-12:52:19-803] WARN    AWT-EventQueue-0     o.h.e.j.spi.SqlExceptionHelper.logExceptions()         : SQL Error: 0, SQLState: 23505
+[20190226-12:52:19-812] ERROR   AWT-EventQueue-0     o.h.e.j.spi.SqlExceptionHelper.logExceptions()         : ERROR: duplicate key value violates unique constraint "uk_m0j7fchyhuyonr8uy6hm83i7q"
+  Detail: Key (properties_id)=(55) already exists.
+[20190226-12:52:19-818] INFO    AWT-EventQueue-0     o.h.e.j.b.internal.AbstractBatchImpl.release()         : HHH000010: On release of batch it still contained JDBC statements
+[20190226-12:52:19-819] ERROR   AWT-EventQueue-0     o.h.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure(): HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+[20190226-12:52:19-847] SEVERE  AWT-EventQueue-0     o.o.u.logging.UncaughtExceptionLogger.uncaughtException(): Unhandled exception
+javax.persistence.RollbackException: Error while committing the transaction
+	at org.hibernate.internal.ExceptionConverterImpl.convertCommitException(ExceptionConverterImpl.java:81)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:107)
+	at org.opentcs.guing.Dao.BlockModelDao.saveInNewTransaction(BlockModelDao.java:22)
+	at org.opentcs.guing.storage.UnifiedModelPersistor.writeFile(UnifiedModelPersistor.java:137)
+	at org.opentcs.guing.storage.UnifiedModelPersistor.serialize(UnifiedModelPersistor.java:104)
 	at org.opentcs.guing.storage.OpenTCSModelManager.persistModel(OpenTCSModelManager.java:432)
 	at org.opentcs.guing.storage.OpenTCSModelManager.persistModel(OpenTCSModelManager.java:372)
 	at org.opentcs.guing.application.OpenTCSView.saveModel(OpenTCSView.java:1592)
@@ -112,413 +100,54 @@ java.io.IOException: Exception marshalling data
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-Caused by: javax.xml.bind.MarshalException
- - with linked exception:
-[org.xml.sax.SAXParseException; lineNumber: 0; columnNumber: 0; cvc-complex-type.3.2.2: Attribute 'vehicleIpAddress' is not allowed to appear in element 'vehicle'.]
-	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:331)
-	at com.sun.xml.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:256)
-	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:116)
-	at org.opentcs.util.persistence.binding.PlantModelTO.toXml(PlantModelTO.java:177)
-	... 45 more
-Caused by: org.xml.sax.SAXParseException; lineNumber: 0; columnNumber: 0; cvc-complex-type.3.2.2: Attribute 'vehicleIpAddress' is not allowed to appear in element 'vehicle'.
-	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
-	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
-	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
-	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
-	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:453)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3231)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2708)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2051)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:741)
-	at com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorHandlerImpl.startElement(ValidatorHandlerImpl.java:568)
-	at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:551)
-	at com.sun.xml.bind.v2.runtime.output.SAXOutput.endStartTag(SAXOutput.java:128)
-	at com.sun.xml.bind.v2.runtime.output.ForkXmlOutput.endStartTag(ForkXmlOutput.java:106)
-	at com.sun.xml.bind.v2.runtime.XMLSerializer.endAttributes(XMLSerializer.java:307)
-	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsXsiType(XMLSerializer.java:695)
-	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.serializeItem(ArrayElementNodeProperty.java:69)
-	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.serializeListBody(ArrayElementProperty.java:172)
-	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.serializeBody(ArrayERProperty.java:159)
-	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeBody(ClassBeanInfoImpl.java:360)
-	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsSoleContent(XMLSerializer.java:593)
-	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeRoot(ClassBeanInfoImpl.java:341)
-	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:494)
-	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:328)
-	... 48 more
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:154)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181)
+	at org.hibernate.internal.ExceptionConverterImpl.convertCommitException(ExceptionConverterImpl.java:65)
+	... 47 more
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:112)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:45)
+	at org.hibernate.persister.collection.AbstractCollectionPersister.recreate(AbstractCollectionPersister.java:1340)
+	at org.hibernate.action.internal.CollectionRecreateAction.execute(CollectionRecreateAction.java:50)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:356)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1484)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:515)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3348)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2519)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:104)
+	... 46 more
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "uk_m0j7fchyhuyonr8uy6hm83i7q"
+  Detail: Key (properties_id)=(55) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:143)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:120)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)
+	... 62 more
 
-[20190225-10:18:36-063] WARN    AWT-EventQueue-0     o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
-[20190225-10:18:36-063] INFO    AWT-EventQueue-0     o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
-[20190225-10:18:36-153] WARN    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-[20190225-10:18:36-154] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmstest]
-[20190225-10:18:36-154] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
-[20190225-10:18:36-155] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
-[20190225-10:18:36-155] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
-[20190225-10:18:36-268] INFO    AWT-EventQueue-0     o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-[20190225-10:18:36-272] WARN    AWT-EventQueue-0     o.h.dialect.H2Dialect.<init>()                         : HHH000431: Unable to determine H2 database version, certain features may not work
-[20190225-10:18:36-469] INFO    AWT-EventQueue-0     o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@742dd903] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-[20190225-10:18:36-531] INFO    AWT-EventQueue-0     o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[20190225-10:19:01-298] SEVERE  AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : An error occurred while saving the model. The model was not saved.
-[20190225-10:19:01-298] WARNING AWT-EventQueue-0     o.o.g.storage.OpenTCSModelManager.persistModel()       : Exception persisting model
-java.io.IOException: Exception marshalling data
-	at org.opentcs.util.persistence.binding.PlantModelTO.toXml(PlantModelTO.java:180)
-	at org.opentcs.guing.storage.UnifiedModelPersistor.writeFile(UnifiedModelPersistor.java:123)
-	at org.opentcs.guing.storage.UnifiedModelPersistor.serialize(UnifiedModelPersistor.java:99)
-	at org.opentcs.guing.storage.OpenTCSModelManager.persistModel(OpenTCSModelManager.java:432)
-	at org.opentcs.guing.storage.OpenTCSModelManager.persistModel(OpenTCSModelManager.java:372)
-	at org.opentcs.guing.application.OpenTCSView.saveModel(OpenTCSView.java:1592)
-	at org.opentcs.guing.application.action.file.SaveModelAction.actionPerformed(SaveModelAction.java:38)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
-	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
-	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:842)
-	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:886)
-	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
-	at java.awt.Component.processMouseEvent(Component.java:6539)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
-	at java.awt.Component.processEvent(Component.java:6304)
-	at java.awt.Container.processEvent(Container.java:2239)
-	at java.awt.Component.dispatchEventImpl(Component.java:4889)
-	at java.awt.Container.dispatchEventImpl(Container.java:2297)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
-	at java.awt.Container.dispatchEventImpl(Container.java:2283)
-	at java.awt.Window.dispatchEventImpl(Window.java:2746)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
-	at java.awt.EventQueue.access$500(EventQueue.java:97)
-	at java.awt.EventQueue$3.run(EventQueue.java:709)
-	at java.awt.EventQueue$3.run(EventQueue.java:703)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
-	at java.awt.EventQueue$4.run(EventQueue.java:733)
-	at java.awt.EventQueue$4.run(EventQueue.java:731)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-Caused by: javax.xml.bind.MarshalException
- - with linked exception:
-[org.xml.sax.SAXParseException; lineNumber: 0; columnNumber: 0; cvc-complex-type.3.2.2: Attribute 'vehicleIpAddress' is not allowed to appear in element 'vehicle'.]
-	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:331)
-	at com.sun.xml.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:256)
-	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:116)
-	at org.opentcs.util.persistence.binding.PlantModelTO.toXml(PlantModelTO.java:177)
-	... 45 more
-Caused by: org.xml.sax.SAXParseException; lineNumber: 0; columnNumber: 0; cvc-complex-type.3.2.2: Attribute 'vehicleIpAddress' is not allowed to appear in element 'vehicle'.
-	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
-	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
-	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
-	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
-	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:453)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3231)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2708)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2051)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:741)
-	at com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorHandlerImpl.startElement(ValidatorHandlerImpl.java:568)
-	at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:551)
-	at com.sun.xml.bind.v2.runtime.output.SAXOutput.endStartTag(SAXOutput.java:128)
-	at com.sun.xml.bind.v2.runtime.output.ForkXmlOutput.endStartTag(ForkXmlOutput.java:106)
-	at com.sun.xml.bind.v2.runtime.XMLSerializer.endAttributes(XMLSerializer.java:307)
-	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsXsiType(XMLSerializer.java:695)
-	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.serializeItem(ArrayElementNodeProperty.java:69)
-	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.serializeListBody(ArrayElementProperty.java:172)
-	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.serializeBody(ArrayERProperty.java:159)
-	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeBody(ClassBeanInfoImpl.java:360)
-	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsSoleContent(XMLSerializer.java:593)
-	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeRoot(ClassBeanInfoImpl.java:341)
-	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:494)
-	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:328)
-	... 48 more
-
-[20190225-10:19:05-535] WARN    AWT-EventQueue-0     o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
-[20190225-10:19:05-536] INFO    AWT-EventQueue-0     o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
-[20190225-10:19:05-718] WARN    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-[20190225-10:19:05-719] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmstest]
-[20190225-10:19:05-732] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
-[20190225-10:19:05-732] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
-[20190225-10:19:05-733] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
-[20190225-10:19:05-985] INFO    AWT-EventQueue-0     o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-[20190225-10:19:05-989] WARN    AWT-EventQueue-0     o.h.dialect.H2Dialect.<init>()                         : HHH000431: Unable to determine H2 database version, certain features may not work
-[20190225-10:19:06-298] INFO    AWT-EventQueue-0     o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@d5199cd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-[20190225-10:19:06-351] INFO    AWT-EventQueue-0     o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[20190225-10:19:08-365] SEVERE  AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : An error occurred while saving the model. The model was not saved.
-[20190225-10:19:08-365] WARNING AWT-EventQueue-0     o.o.g.storage.OpenTCSModelManager.persistModel()       : Exception persisting model
-java.io.IOException: Exception marshalling data
-	at org.opentcs.util.persistence.binding.PlantModelTO.toXml(PlantModelTO.java:180)
-	at org.opentcs.guing.storage.UnifiedModelPersistor.writeFile(UnifiedModelPersistor.java:123)
-	at org.opentcs.guing.storage.UnifiedModelPersistor.serialize(UnifiedModelPersistor.java:99)
-	at org.opentcs.guing.storage.OpenTCSModelManager.persistModel(OpenTCSModelManager.java:432)
-	at org.opentcs.guing.storage.OpenTCSModelManager.persistModel(OpenTCSModelManager.java:372)
-	at org.opentcs.guing.application.OpenTCSView.saveModel(OpenTCSView.java:1592)
-	at org.opentcs.guing.application.action.file.SaveModelAction.actionPerformed(SaveModelAction.java:38)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
-	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
-	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:842)
-	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:886)
-	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
-	at java.awt.Component.processMouseEvent(Component.java:6539)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
-	at java.awt.Component.processEvent(Component.java:6304)
-	at java.awt.Container.processEvent(Container.java:2239)
-	at java.awt.Component.dispatchEventImpl(Component.java:4889)
-	at java.awt.Container.dispatchEventImpl(Container.java:2297)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
-	at java.awt.Container.dispatchEventImpl(Container.java:2283)
-	at java.awt.Window.dispatchEventImpl(Window.java:2746)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
-	at java.awt.EventQueue.access$500(EventQueue.java:97)
-	at java.awt.EventQueue$3.run(EventQueue.java:709)
-	at java.awt.EventQueue$3.run(EventQueue.java:703)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
-	at java.awt.EventQueue$4.run(EventQueue.java:733)
-	at java.awt.EventQueue$4.run(EventQueue.java:731)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-Caused by: javax.xml.bind.MarshalException
- - with linked exception:
-[org.xml.sax.SAXParseException; lineNumber: 0; columnNumber: 0; cvc-complex-type.3.2.2: Attribute 'vehicleIpAddress' is not allowed to appear in element 'vehicle'.]
-	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:331)
-	at com.sun.xml.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:256)
-	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:116)
-	at org.opentcs.util.persistence.binding.PlantModelTO.toXml(PlantModelTO.java:177)
-	... 45 more
-Caused by: org.xml.sax.SAXParseException; lineNumber: 0; columnNumber: 0; cvc-complex-type.3.2.2: Attribute 'vehicleIpAddress' is not allowed to appear in element 'vehicle'.
-	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
-	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
-	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
-	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
-	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:453)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3231)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2708)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2051)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:741)
-	at com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorHandlerImpl.startElement(ValidatorHandlerImpl.java:568)
-	at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:551)
-	at com.sun.xml.bind.v2.runtime.output.SAXOutput.endStartTag(SAXOutput.java:128)
-	at com.sun.xml.bind.v2.runtime.output.ForkXmlOutput.endStartTag(ForkXmlOutput.java:106)
-	at com.sun.xml.bind.v2.runtime.XMLSerializer.endAttributes(XMLSerializer.java:307)
-	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsXsiType(XMLSerializer.java:695)
-	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.serializeItem(ArrayElementNodeProperty.java:69)
-	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.serializeListBody(ArrayElementProperty.java:172)
-	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.serializeBody(ArrayERProperty.java:159)
-	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeBody(ClassBeanInfoImpl.java:360)
-	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsSoleContent(XMLSerializer.java:593)
-	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeRoot(ClassBeanInfoImpl.java:341)
-	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:494)
-	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:328)
-	... 48 more
-
-[20190225-10:20:57-952] WARN    AWT-EventQueue-0     o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
-[20190225-10:20:57-953] INFO    AWT-EventQueue-0     o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
-[20190225-10:20:58-042] WARN    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-[20190225-10:20:58-043] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmstest]
-[20190225-10:20:58-044] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
-[20190225-10:20:58-044] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
-[20190225-10:20:58-044] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
-[20190225-10:20:58-109] INFO    AWT-EventQueue-0     o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-[20190225-10:20:58-113] WARN    AWT-EventQueue-0     o.h.dialect.H2Dialect.<init>()                         : HHH000431: Unable to determine H2 database version, certain features may not work
-[20190225-10:20:58-933] INFO    AWT-EventQueue-0     o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@18c35a75] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-[20190225-10:20:59-038] INFO    AWT-EventQueue-0     o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[20190225-10:21:01-862] SEVERE  AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : An error occurred while saving the model. The model was not saved.
-[20190225-10:21:01-863] WARNING AWT-EventQueue-0     o.o.g.storage.OpenTCSModelManager.persistModel()       : Exception persisting model
-java.io.IOException: Exception marshalling data
-	at org.opentcs.util.persistence.binding.PlantModelTO.toXml(PlantModelTO.java:180)
-	at org.opentcs.guing.storage.UnifiedModelPersistor.writeFile(UnifiedModelPersistor.java:123)
-	at org.opentcs.guing.storage.UnifiedModelPersistor.serialize(UnifiedModelPersistor.java:99)
-	at org.opentcs.guing.storage.OpenTCSModelManager.persistModel(OpenTCSModelManager.java:432)
-	at org.opentcs.guing.storage.OpenTCSModelManager.persistModel(OpenTCSModelManager.java:372)
-	at org.opentcs.guing.application.OpenTCSView.saveModel(OpenTCSView.java:1592)
-	at org.opentcs.guing.application.action.file.SaveModelAction.actionPerformed(SaveModelAction.java:38)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
-	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
-	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:842)
-	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:886)
-	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
-	at java.awt.Component.processMouseEvent(Component.java:6539)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
-	at java.awt.Component.processEvent(Component.java:6304)
-	at java.awt.Container.processEvent(Container.java:2239)
-	at java.awt.Component.dispatchEventImpl(Component.java:4889)
-	at java.awt.Container.dispatchEventImpl(Container.java:2297)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
-	at java.awt.Container.dispatchEventImpl(Container.java:2283)
-	at java.awt.Window.dispatchEventImpl(Window.java:2746)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
-	at java.awt.EventQueue.access$500(EventQueue.java:97)
-	at java.awt.EventQueue$3.run(EventQueue.java:709)
-	at java.awt.EventQueue$3.run(EventQueue.java:703)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
-	at java.awt.EventQueue$4.run(EventQueue.java:733)
-	at java.awt.EventQueue$4.run(EventQueue.java:731)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-Caused by: javax.xml.bind.MarshalException
- - with linked exception:
-[org.xml.sax.SAXParseException; lineNumber: 0; columnNumber: 0; cvc-complex-type.3.2.2: Attribute 'vehicleIpAddress' is not allowed to appear in element 'vehicle'.]
-	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:331)
-	at com.sun.xml.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:256)
-	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:116)
-	at org.opentcs.util.persistence.binding.PlantModelTO.toXml(PlantModelTO.java:177)
-	... 45 more
-Caused by: org.xml.sax.SAXParseException; lineNumber: 0; columnNumber: 0; cvc-complex-type.3.2.2: Attribute 'vehicleIpAddress' is not allowed to appear in element 'vehicle'.
-	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
-	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
-	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
-	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
-	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:453)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3231)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2708)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2051)
-	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:741)
-	at com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorHandlerImpl.startElement(ValidatorHandlerImpl.java:568)
-	at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:551)
-	at com.sun.xml.bind.v2.runtime.output.SAXOutput.endStartTag(SAXOutput.java:128)
-	at com.sun.xml.bind.v2.runtime.output.ForkXmlOutput.endStartTag(ForkXmlOutput.java:106)
-	at com.sun.xml.bind.v2.runtime.XMLSerializer.endAttributes(XMLSerializer.java:307)
-	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsXsiType(XMLSerializer.java:695)
-	at com.sun.xml.bind.v2.runtime.property.ArrayElementNodeProperty.serializeItem(ArrayElementNodeProperty.java:69)
-	at com.sun.xml.bind.v2.runtime.property.ArrayElementProperty.serializeListBody(ArrayElementProperty.java:172)
-	at com.sun.xml.bind.v2.runtime.property.ArrayERProperty.serializeBody(ArrayERProperty.java:159)
-	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeBody(ClassBeanInfoImpl.java:360)
-	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsSoleContent(XMLSerializer.java:593)
-	at com.sun.xml.bind.v2.runtime.ClassBeanInfoImpl.serializeRoot(ClassBeanInfoImpl.java:341)
-	at com.sun.xml.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:494)
-	at com.sun.xml.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:328)
-	... 48 more
-
-[20190225-10:24:49-327] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-25 09:42:23), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
-[20190225-10:24:49-685] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.guing.configuration.CachedConfigurationSource source, org.opentcs.guing.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
-[20190225-10:24:49-757] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultImportersExportersModule
-[20190225-10:24:49-758] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.DefaultImportersExportersModule
-[20190225-10:24:49-761] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultPluginPanelsModule
-[20190225-10:24:49-762] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.DefaultPluginPanelsModule
-[20190225-10:24:49-766] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.PropertySuggestionsModule
-[20190225-10:24:49-767] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.PropertySuggestionsModule
-[20190225-10:24:49-771] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.transport.OrderCategorySuggestionsModule
-[20190225-10:24:49-771] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.transport.OrderCategorySuggestionsModule
-[20190225-10:24:50-926] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
-[20190225-10:25:06-116] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
-[20190225-10:25:06-117] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
-[20190225-10:25:06-119] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
-[20190225-10:25:06-317] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
-[20190225-10:25:42-706] WARN    AWT-EventQueue-0     o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
-[20190225-10:25:42-737] INFO    AWT-EventQueue-0     o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
-[20190225-10:25:43-137] INFO    AWT-EventQueue-0     o.hibernate.Version.logVersion()                       : HHH000412: Hibernate Core {5.4.1.Final}
-[20190225-10:25:44-113] INFO    AWT-EventQueue-0     o.h.a.c.r.java.JavaReflectionManager.<clinit>()        : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-[20190225-10:25:44-872] WARN    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-[20190225-10:25:44-901] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmstest]
-[20190225-10:25:44-903] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
-[20190225-10:25:44-904] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
-[20190225-10:25:44-918] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
-[20190225-10:25:45-335] INFO    AWT-EventQueue-0     o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-[20190225-10:25:45-384] WARN    AWT-EventQueue-0     o.h.dialect.H2Dialect.<init>()                         : HHH000431: Unable to determine H2 database version, certain features may not work
-[20190225-10:25:49-157] INFO    AWT-EventQueue-0     o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6e3eaab0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-[20190225-10:25:49-243] INFO    AWT-EventQueue-0     o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[20190225-10:26:00-440] WARN    AWT-EventQueue-0     o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
-[20190225-10:26:00-441] INFO    AWT-EventQueue-0     o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
-[20190225-10:26:00-539] WARN    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-[20190225-10:26:00-540] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmstest]
-[20190225-10:26:00-541] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
-[20190225-10:26:00-542] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
-[20190225-10:26:00-542] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
-[20190225-10:26:00-681] INFO    AWT-EventQueue-0     o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-[20190225-10:26:00-686] WARN    AWT-EventQueue-0     o.h.dialect.H2Dialect.<init>()                         : HHH000431: Unable to determine H2 database version, certain features may not work
-[20190225-10:26:00-899] INFO    AWT-EventQueue-0     o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@637f34f8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-[20190225-10:26:00-960] INFO    AWT-EventQueue-0     o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[20190225-10:28:27-195] WARN    AWT-EventQueue-0     o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
-[20190225-10:28:27-196] INFO    AWT-EventQueue-0     o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
-[20190225-10:28:27-304] WARN    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-[20190225-10:28:27-305] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmstest]
-[20190225-10:28:27-306] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
-[20190225-10:28:27-306] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
-[20190225-10:28:27-307] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
-[20190225-10:28:27-346] INFO    AWT-EventQueue-0     o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-[20190225-10:28:27-351] WARN    AWT-EventQueue-0     o.h.dialect.H2Dialect.<init>()                         : HHH000431: Unable to determine H2 database version, certain features may not work
-[20190225-10:28:27-544] INFO    AWT-EventQueue-0     o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3082f3df] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-[20190225-10:28:27-600] INFO    AWT-EventQueue-0     o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[20190225-10:29:09-486] WARN    AWT-EventQueue-0     o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
-[20190225-10:29:09-487] INFO    AWT-EventQueue-0     o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
-[20190225-10:29:09-579] WARN    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-[20190225-10:29:09-580] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmstest]
-[20190225-10:29:09-581] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
-[20190225-10:29:09-581] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
-[20190225-10:29:09-582] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
-[20190225-10:29:09-625] INFO    AWT-EventQueue-0     o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-[20190225-10:29:09-629] WARN    AWT-EventQueue-0     o.h.dialect.H2Dialect.<init>()                         : HHH000431: Unable to determine H2 database version, certain features may not work
-[20190225-10:29:09-814] INFO    AWT-EventQueue-0     o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1ee6bae6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-[20190225-10:29:09-867] INFO    AWT-EventQueue-0     o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[20190225-10:29:52-032] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-25 09:42:23), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
-[20190225-10:29:52-352] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.guing.configuration.CachedConfigurationSource source, org.opentcs.guing.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
-[20190225-10:29:52-420] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultImportersExportersModule
-[20190225-10:29:52-421] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.DefaultImportersExportersModule
-[20190225-10:29:52-425] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultPluginPanelsModule
-[20190225-10:29:52-426] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.DefaultPluginPanelsModule
-[20190225-10:29:52-429] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.PropertySuggestionsModule
-[20190225-10:29:52-431] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.PropertySuggestionsModule
-[20190225-10:29:52-437] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.transport.OrderCategorySuggestionsModule
-[20190225-10:29:52-439] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Hello WOrld injection module org.opentcs.guing.transport.OrderCategorySuggestionsModule
-[20190225-10:29:53-469] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
-[20190225-10:30:10-532] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
-[20190225-10:30:10-534] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
-[20190225-10:30:10-534] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
-[20190225-10:30:10-737] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
-[20190225-10:45:14-799] WARN    AWT-EventQueue-0     o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
-[20190225-10:45:14-831] INFO    AWT-EventQueue-0     o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
-[20190225-10:45:15-248] INFO    AWT-EventQueue-0     o.hibernate.Version.logVersion()                       : HHH000412: Hibernate Core {5.4.1.Final}
-[20190225-10:45:16-188] INFO    AWT-EventQueue-0     o.h.a.c.r.java.JavaReflectionManager.<clinit>()        : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-[20190225-10:45:16-914] WARN    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-[20190225-10:45:16-939] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmstest]
-[20190225-10:45:16-940] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
-[20190225-10:45:16-941] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
-[20190225-10:45:16-955] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
-[20190225-10:45:17-339] INFO    AWT-EventQueue-0     o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-[20190225-10:45:17-379] WARN    AWT-EventQueue-0     o.h.dialect.H2Dialect.<init>()                         : HHH000431: Unable to determine H2 database version, certain features may not work
-[20190225-10:45:20-895] INFO    AWT-EventQueue-0     o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4e2c3d66] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-[20190225-10:45:20-977] INFO    AWT-EventQueue-0     o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[20190225-10:59:41-486] INFO    AWT-EventQueue-0     o.o.g.application.OpenTCSView.stop()                   : GUI terminating...
+[20190226-12:57:45-804] WARN    AWT-EventQueue-0     o.h.j.b.internal.PersistenceXmlParser.parsePersistenceXml(): HHH015018: Encountered multiple persistence-unit stanzas defining same name [db-manager]; persistence-unit names must be unique
+[20190226-12:57:45-804] INFO    AWT-EventQueue-0     o.h.j.i.util.LogHelper.logPersistenceUnitInformation() : HHH000204: Processing PersistenceUnitInfo [name: db-manager]
+[20190226-12:57:45-951] WARN    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.configure(): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[20190226-12:57:45-952] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql:fmsfinaldb]
+[20190226-12:57:45-953] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001001: Connection properties: {user=postgres, password=****}
+[20190226-12:57:45-954] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl.buildCreator(): HHH10001003: Autocommit mode: false
+[20190226-12:57:45-954] INFO    AWT-EventQueue-0     o.h.e.j.c.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(): HHH000115: Hibernate connection pool size: 1 (min=1)
+[20190226-12:57:45-999] INFO    AWT-EventQueue-0     o.h.dialect.Dialect.<init>()                           : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[20190226-12:57:46-340] INFO    AWT-EventQueue-0     o.h.r.t.b.j.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(): HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@65a11639] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[20190226-12:57:46-411] INFO    AWT-EventQueue-0     o.h.e.t.j.p.internal.JtaPlatformInitiator.initiateService(): HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[20190226-12:57:51-251] INFO    AWT-EventQueue-0     o.o.g.application.OpenTCSView.stop()                   : GUI terminating...

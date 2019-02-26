@@ -13,7 +13,7 @@ public class Vehicle {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "vehicle_generator")
-	@SequenceGenerator(name = "vehicle_generator", sequenceName = "vehicle_id_seq")
+	@SequenceGenerator(name = "vehicle_generator", sequenceName = "vehicle_id_seq", allocationSize = 1)
 	Integer id;
 
 	String name;

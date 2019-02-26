@@ -1,6 +1,7 @@
 package org.opentcs.util.persistence.models;
 
 import java.util.List;
+import javax.persistence.CascadeType;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,10 +17,10 @@ public class ModelLayoutElement {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "modellayoutelement_generator")
-	@SequenceGenerator(name = "modellayoutelement_generator", sequenceName = "modellayoutelement_id_seq")
+	@SequenceGenerator(name = "modellayoutelement_generator", sequenceName = "modellayoutelement_id_seq", allocationSize = 1)
 	Integer id;
 
-	@OneToMany
+	@OneToMany (cascade = CascadeType.ALL)
 	List<Property> properties;
 
 	String visualizedObjectName;

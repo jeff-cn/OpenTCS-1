@@ -1,6 +1,7 @@
 package org.opentcs.util.persistence.models;
 
 import java.util.List;
+import javax.persistence.CascadeType;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,13 +17,13 @@ public class VisualLayout {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "visual_layout_generator")
-	@SequenceGenerator(name = "visual_layout_generator", sequenceName = "visuallayout_id_seq")
+	@SequenceGenerator(name = "visual_layout_generator", sequenceName = "visuallayout_id_seq", allocationSize = 1)
 	Integer id;
 
-	@OneToMany
+	@OneToMany (cascade = CascadeType.ALL)
 	List<ModelLayoutElement> modelLayoutElements;
 
-	@OneToMany
+	@OneToMany (cascade = CascadeType.ALL)
 	List<Property> properties;
 
 	String name;
