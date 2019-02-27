@@ -1,43 +1,43 @@
-[20190225-10:14:09-183] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-25 09:42:23), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
-[20190225-10:14:09-516] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
-[20190225-10:14:09-618] INFO    main                 o.o.kernel.RunKernel.findRegisteredModules()           : Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
-[20190225-10:14:09-623] INFO    main                 o.o.kernel.RunKernel.findRegisteredModules()           : Integrating injection module org.opentcs.kernel.AGVCommAdapterModule
-[20190225-10:14:10-859] WARNING main                 o.o.kernel.DefaultKernelInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
-[20190225-10:14:13-658] INFO    main                 o.o.k.vehicles.VehicleCommAdapterRegistry.<init>()     : Setting up communication adapter factory: org.opentcs.virtualvehicle.AGVCommAdapterFactory
-[20190225-10:14:13-811] INFO    main                 o.o.k.e.rmi.XMLFileUserAccountPersister.loadUserAccounts(): Account data file does not exist, no user accounts available.
-[20190225-10:14:14-283] INFO    main                 o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'MODELLING'
-[20190225-10:14:14-441] INFO    Thread-1             o.e.j.u.log.Log.initialized()                          : Logging initialized @5710ms to org.eclipse.jetty.util.log.Slf4jLog
-[20190225-10:14:14-650] INFO    Thread-1             s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
-[20190225-10:14:14-651] INFO    Thread-1             s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 127.0.0.1:55100
-[20190225-10:14:14-670] INFO    Thread-1             o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
-[20190225-10:14:14-768] INFO    Thread-1             o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
-[20190225-10:14:14-804] INFO    Thread-1             o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
-[20190225-10:14:14-816] INFO    Thread-1             o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 600000ms
-[20190225-10:14:14-943] INFO    Thread-1             o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@d2d210{HTTP/1.1,[http/1.1]}{127.0.0.1:55100}
-[20190225-10:14:14-946] INFO    Thread-1             o.e.j.server.Server.doStart()                          : Started @6215ms
-[20190225-10:14:15-578] INFO    main                 o.o.kernel.KernelStarter.startKernel()                 : Loaded model named 'unnamed'.
-[20190225-10:14:15-581] INFO    main                 o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'OPERATING'
-[20190225-10:14:15-596] WARNING main                 o.o.k.e.servicewebapi.ServiceWebApi.initialize()       : Encryption disabled, connections will not be secured!
-[20190225-10:14:15-606] INFO    Thread-10            s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
-[20190225-10:14:15-606] INFO    Thread-10            s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 0.0.0.0:55200
-[20190225-10:14:15-607] INFO    Thread-10            o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
-[20190225-10:14:15-609] INFO    Thread-10            o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
-[20190225-10:14:15-609] INFO    Thread-10            o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
-[20190225-10:14:15-610] INFO    Thread-10            o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 660000ms
-[20190225-10:14:15-620] INFO    Thread-10            o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@2f0687e{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
-[20190225-10:14:15-621] INFO    Thread-10            o.e.j.server.Server.doStart()                          : Started @6890ms
-[20190225-10:14:15-635] INFO    main                 o.o.k.e.statistics.StatisticsCollector.initialize()    : Logging events to C:\Users\Administrator\Desktop\Java Projects\CopyOriginal\fmssrc-master\openTCS-Kernel\build\install\openTCS-Kernel\.\log\statistics\opentcs-statistics-20190225-101415.txt...
-[20190225-10:16:31-747] INFO    kernelExecutor       o.o.k.e.x.orders.XMLTelegramOrderReceiver.terminate()  : Terminating connection listener...
-[20190225-10:16:31-750] INFO    Thread-19            s.e.jetty.EmbeddedJettyServer.extinguish()             : >>> Spark shutting down ...
-[20190225-10:16:31-774] INFO    xmlOrderConnListener o.o.k.e.x.orders.XMLTelegramOrderReceiver$ConnectionListener.run(): Received termination signal.
-[20190225-10:16:31-775] INFO    xmlOrderConnListener o.o.k.e.x.orders.XMLTelegramOrderReceiver$ConnectionListener.run(): Terminated connection listener.
-[20190225-10:16:31-783] INFO    Thread-19            o.e.j.server.AbstractConnector.doStop()                : Stopped ServerConnector@2f0687e{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
-[20190225-10:16:31-784] INFO    kernelExecutor       o.o.k.e.x.orders.XMLTelegramOrderReceiver.terminate()  : Connection listener thread has terminated.
-[20190225-10:16:31-790] INFO    Thread-19            o.e.j.s.session.HouseKeeper.stopScavenging()           : Stopped scavenging
-[20190225-10:16:31-823] INFO    Thread-19            s.e.jetty.EmbeddedJettyServer.extinguish()             : done
-[20190225-10:16:32-300] INFO    kernelExecutor       o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'MODELLING'
-[20190225-10:16:32-754] INFO    kernelExecutor       o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'OPERATING'
-[20190225-10:16:33-504] SEVERE  kernelExecutor       o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+[20190227-12:57:05-491] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.10.0-SNAPSHOT (build date: 2019-02-25 09:42:23), customization '-' version - (build date: -), Java: 1.8.0_201, Oracle Corporation; JVM: 25.201-b09, Oracle Corporation; OS: Windows Server 2016, amd64
+[20190227-12:57:05-733] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.kernel.configuration.CachedConfigurationSource source, org.opentcs.kernel.configuration.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20190227-12:57:05-817] INFO    main                 o.o.kernel.RunKernel.findRegisteredModules()           : Integrating injection module org.opentcs.kernel.DefaultKernelExtensionsModule
+[20190227-12:57:05-820] INFO    main                 o.o.kernel.RunKernel.findRegisteredModules()           : Integrating injection module org.opentcs.kernel.AGVCommAdapterModule
+[20190227-12:57:06-791] WARNING main                 o.o.kernel.DefaultKernelInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20190227-12:57:08-897] INFO    main                 o.o.k.vehicles.VehicleCommAdapterRegistry.<init>()     : Setting up communication adapter factory: org.opentcs.virtualvehicle.AGVCommAdapterFactory
+[20190227-12:57:09-051] INFO    main                 o.o.k.e.rmi.XMLFileUserAccountPersister.loadUserAccounts(): Account data file does not exist, no user accounts available.
+[20190227-12:57:09-324] INFO    main                 o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'MODELLING'
+[20190227-12:57:09-431] INFO    Thread-1             o.e.j.u.log.Log.initialized()                          : Logging initialized @4281ms to org.eclipse.jetty.util.log.Slf4jLog
+[20190227-12:57:09-611] INFO    Thread-1             s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
+[20190227-12:57:09-611] INFO    Thread-1             s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 127.0.0.1:55100
+[20190227-12:57:09-624] INFO    Thread-1             o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
+[20190227-12:57:09-699] INFO    Thread-1             o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
+[20190227-12:57:09-700] INFO    Thread-1             o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
+[20190227-12:57:09-706] INFO    Thread-1             o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 660000ms
+[20190227-12:57:09-766] INFO    Thread-1             o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@53db18a{HTTP/1.1,[http/1.1]}{127.0.0.1:55100}
+[20190227-12:57:09-767] INFO    Thread-1             o.e.j.server.Server.doStart()                          : Started @4618ms
+[20190227-12:57:10-285] INFO    main                 o.o.kernel.KernelStarter.startKernel()                 : Loaded model named 'unnamed'.
+[20190227-12:57:10-286] INFO    main                 o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'OPERATING'
+[20190227-12:57:10-297] WARNING main                 o.o.k.e.servicewebapi.ServiceWebApi.initialize()       : Encryption disabled, connections will not be secured!
+[20190227-12:57:10-304] INFO    Thread-10            s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
+[20190227-12:57:10-304] INFO    Thread-10            s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 0.0.0.0:55200
+[20190227-12:57:10-305] INFO    Thread-10            o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
+[20190227-12:57:10-306] INFO    Thread-10            o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
+[20190227-12:57:10-307] INFO    Thread-10            o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
+[20190227-12:57:10-307] INFO    Thread-10            o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 600000ms
+[20190227-12:57:10-312] INFO    Thread-10            o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@48b5dad1{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
+[20190227-12:57:10-313] INFO    Thread-10            o.e.j.server.Server.doStart()                          : Started @5164ms
+[20190227-12:57:10-316] INFO    main                 o.o.k.e.statistics.StatisticsCollector.initialize()    : Logging events to C:\Users\Administrator\Desktop\Java Projects\CopyOriginal\fmssrc-master\openTCS-Kernel\build\install\openTCS-Kernel\.\log\statistics\opentcs-statistics-20190227-125710.txt...
+[20190227-12:58:57-761] INFO    kernelExecutor       o.o.k.e.x.orders.XMLTelegramOrderReceiver.terminate()  : Terminating connection listener...
+[20190227-12:58:57-761] INFO    Thread-19            s.e.jetty.EmbeddedJettyServer.extinguish()             : >>> Spark shutting down ...
+[20190227-12:58:57-762] INFO    xmlOrderConnListener o.o.k.e.x.orders.XMLTelegramOrderReceiver$ConnectionListener.run(): Received termination signal.
+[20190227-12:58:57-765] INFO    xmlOrderConnListener o.o.k.e.x.orders.XMLTelegramOrderReceiver$ConnectionListener.run(): Terminated connection listener.
+[20190227-12:58:57-768] INFO    kernelExecutor       o.o.k.e.x.orders.XMLTelegramOrderReceiver.terminate()  : Connection listener thread has terminated.
+[20190227-12:58:57-786] INFO    Thread-19            o.e.j.server.AbstractConnector.doStop()                : Stopped ServerConnector@48b5dad1{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
+[20190227-12:58:57-787] INFO    Thread-19            o.e.j.s.session.HouseKeeper.stopScavenging()           : Stopped scavenging
+[20190227-12:58:57-790] INFO    Thread-19            s.e.jetty.EmbeddedJettyServer.extinguish()             : done
+[20190227-12:58:58-274] INFO    kernelExecutor       o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'MODELLING'
+[20190227-12:58:58-512] INFO    kernelExecutor       o.o.kernel.StandardKernel.setState()                   : Switching kernel to state 'OPERATING'
+[20190227-12:58:59-061] SEVERE  kernelExecutor       o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
 java.net.BindException: Address already in use: Cannot bind
 	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
 	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
@@ -66,7 +66,7 @@ java.net.BindException: Address already in use: Cannot bind
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 
-[20190225-10:16:33-541] SEVERE  kernelExecutor       o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+[20190227-12:58:59-082] SEVERE  kernelExecutor       o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
 java.net.BindException: Address already in use: Cannot bind
 	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
 	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
@@ -95,7 +95,7 @@ java.net.BindException: Address already in use: Cannot bind
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 
-[20190225-10:16:33-714] SEVERE  kernelExecutor       o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
+[20190227-12:58:59-105] SEVERE  kernelExecutor       o.o.virtualvehicle.AGVCommAdapter.initialize()         : null
 java.net.BindException: Address already in use: Cannot bind
 	at java.net.DualStackPlainDatagramSocketImpl.socketBind(Native Method)
 	at java.net.DualStackPlainDatagramSocketImpl.bind0(DualStackPlainDatagramSocketImpl.java:84)
@@ -124,41 +124,28 @@ java.net.BindException: Address already in use: Cannot bind
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 
-[20190225-10:16:33-723] WARNING kernelExecutor       o.o.k.e.servicewebapi.ServiceWebApi.initialize()       : Encryption disabled, connections will not be secured!
-[20190225-10:16:33-725] INFO    Thread-25            s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
-[20190225-10:16:33-725] INFO    Thread-25            s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 0.0.0.0:55200
-[20190225-10:16:33-726] INFO    Thread-25            o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
-[20190225-10:16:33-727] INFO    kernelExecutor       o.o.k.e.statistics.StatisticsCollector.initialize()    : Logging events to C:\Users\Administrator\Desktop\Java Projects\CopyOriginal\fmssrc-master\openTCS-Kernel\build\install\openTCS-Kernel\.\log\statistics\opentcs-statistics-20190225-101633.txt...
-[20190225-10:16:33-727] INFO    Thread-25            o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
-[20190225-10:16:33-729] INFO    Thread-25            o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
-[20190225-10:16:33-746] INFO    Thread-25            o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 660000ms
-[20190225-10:16:33-751] INFO    Thread-25            o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@2cbe2b28{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
-[20190225-10:16:33-752] INFO    Thread-25            o.e.j.server.Server.doStart()                          : Started @145022ms
-[20190225-10:16:59-708] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:00-711] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:01-714] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:02-717] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:03-720] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:04-722] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:05-725] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:06-729] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:07-731] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:08-733] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:09-735] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:10-737] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:11-740] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:12-743] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:13-747] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:14-749] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:15-752] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:16-753] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:17-757] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:18-760] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:19-761] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:17:26-388] INFO    kernelExecutor       o.o.s.b.dispatching.TransportOrderUtil.updateTransportOrderState(): Updating state of transport order Park-afff98d3-9532-4302-97de-79ebaa237ca2 to BEING_PROCESSED...
-[20190225-10:24:02-122] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:24:03-125] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:24:04-128] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:24:05-130] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:24:06-131] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
-[20190225-10:24:07-133] INFO    kernelExecutor       o.o.virtualvehicle.AITVTCPCommunication.reconnect()    : Attempting to recoonect
+[20190227-12:58:59-112] WARNING kernelExecutor       o.o.k.e.servicewebapi.ServiceWebApi.initialize()       : Encryption disabled, connections will not be secured!
+[20190227-12:58:59-113] INFO    Thread-25            s.e.jetty.EmbeddedJettyServer.ignite()                 : == Spark has ignited ...
+[20190227-12:58:59-113] INFO    Thread-25            s.e.jetty.EmbeddedJettyServer.ignite()                 : >> Listening on 0.0.0.0:55200
+[20190227-12:58:59-114] INFO    Thread-25            o.e.j.server.Server.doStart()                          : jetty-9.4.6.v20170531
+[20190227-12:58:59-114] INFO    kernelExecutor       o.o.k.e.statistics.StatisticsCollector.initialize()    : Logging events to C:\Users\Administrator\Desktop\Java Projects\CopyOriginal\fmssrc-master\openTCS-Kernel\build\install\openTCS-Kernel\.\log\statistics\opentcs-statistics-20190227-125859.txt...
+[20190227-12:58:59-115] INFO    Thread-25            o.e.j.s.session.DefaultSessionIdManager.doStart()      : DefaultSessionIdManager workerName=node0
+[20190227-12:58:59-115] INFO    Thread-25            o.e.j.s.session.DefaultSessionIdManager.doStart()      : No SessionScavenger set, using defaults
+[20190227-12:58:59-116] INFO    Thread-25            o.e.j.s.session.HouseKeeper.startScavenging()          : Scavenging every 660000ms
+[20190227-12:58:59-120] INFO    Thread-25            o.e.j.server.AbstractConnector.doStart()               : Started ServerConnector@25c8578{HTTP/1.1,[http/1.1]}{0.0.0.0:55200}
+[20190227-12:58:59-121] INFO    Thread-25            o.e.j.server.Server.doStart()                          : Started @113972ms
+[20190227-13:00:16-974] INFO    kernelExecutor       o.o.s.b.dispatching.TransportOrderUtil.updateTransportOrderState(): Updating state of transport order Park-88a216a8-b311-43a5-a0db-7d1c203be659 to BEING_PROCESSED...
+[20190227-13:00:35-867] WARNING Vehicle-01-simulationTask o.o.k.vehicles.DefaultVehicleController.updatePositionWithOrder(): Vehicle-01: Reported position: Point-0002, expected: Point-0039
+[20190227-13:00:46-603] WARNING Vehicle-01-simulationTask o.o.k.vehicles.DefaultVehicleController.updatePositionWithOrder(): Vehicle-01: Reported position: Point-0008, expected: Point-0040
+[20190227-13:06:40-901] SEVERE  Vehicle-01-simulationTask o.o.virtualvehicle.AGVCommAdapter$VehicleSimulationTask.runActualTask(): null
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at org.opentcs.virtualvehicle.CapitalizeClient.getPosition(CapitalizeClient.java:96)
+	at org.opentcs.virtualvehicle.AITVTCPCommunication.getPosition(AITVTCPCommunication.java:151)
+	at org.opentcs.virtualvehicle.AGVCommAdapter$VehicleSimulationTask.simulateMovement(AGVCommAdapter.java:613)
+	at org.opentcs.virtualvehicle.AGVCommAdapter$VehicleSimulationTask.runActualTask(AGVCommAdapter.java:521)
+	at org.opentcs.util.CyclicTask.run(CyclicTask.java:154)
+	at java.lang.Thread.run(Thread.java:748)
+

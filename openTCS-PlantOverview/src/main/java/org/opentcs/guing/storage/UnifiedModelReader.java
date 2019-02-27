@@ -8,6 +8,8 @@
  */
 package org.opentcs.guing.storage;
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -25,6 +27,8 @@ import java.util.stream.Collectors;
 import javax.inject.Inject;
 import javax.inject.Provider;
 import javax.swing.filechooser.FileFilter;
+import org.opentcs.guing.Dao.BlockModelDao;
+import org.opentcs.guing.application.DbModule;
 import org.opentcs.guing.application.StatusPanel;
 import org.opentcs.guing.components.properties.type.KeyValueProperty;
 import org.opentcs.guing.components.properties.type.Property;
@@ -43,6 +47,8 @@ import org.opentcs.guing.model.elements.VehicleModel;
 import org.opentcs.guing.persistence.UnifiedModelComponentConverter;
 import org.opentcs.guing.util.JOptionPaneUtil;
 import org.opentcs.guing.util.ResourceBundleUtil;
+import static org.opentcs.util.PlantModelConverter.convertModelToPlantModelTO;
+import static org.opentcs.util.PlantModelConverter.convertPlantModelTOtoDbModel;
 import org.opentcs.util.persistence.binding.BlockTO;
 import org.opentcs.util.persistence.binding.GroupTO;
 import org.opentcs.util.persistence.binding.LocationTO;
@@ -52,6 +58,7 @@ import org.opentcs.util.persistence.binding.PlantModelTO;
 import org.opentcs.util.persistence.binding.PointTO;
 import org.opentcs.util.persistence.binding.StaticRouteTO;
 import org.opentcs.util.persistence.binding.VehicleTO;
+import org.opentcs.util.persistence.models.Model;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -106,10 +113,21 @@ public class UnifiedModelReader
       systemModel.setName(modelName);
     }
 
+    
+    
     PlantModelTO plantModel;
+    
+    
+  final Injector injector = Guice.createInjector(new DbModule());
+  final BlockModelDao blockModelDao = injector.getInstance(BlockModelDao.class);
+  final Model model = blockModelDao.getObject();
+  
+  
     try (Reader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file),
                                                                   Charset.forName("UTF-8")))) {
-      plantModel = PlantModelTO.fromXml(reader);
+      
+//     plantModel = PlantModelTO.fromXml(reader);
+     plantModel = convertModelToPlantModelTO(model);
     }
 
     plantModel.getProperties().stream()

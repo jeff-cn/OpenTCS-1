@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -120,5 +121,10 @@ public class Model {
 	public void setName(final String name) {
 		this.name = name;
 	}
+
+  @Override
+  public String toString() {
+    return "Model{" + "id=" + id + ", version=" + version + ", name=" + name + ", points=" + points + ", paths=" + paths + ", vehicles=" + vehicles + ", locationTypes=" + locationTypes + ", locations=" + locations + ", blocks=" + blocks + ", visualLayouts=" + visualLayouts + '}';
+  }
 
 }

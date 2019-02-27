@@ -67,19 +67,20 @@ public class RunPlantOverview {
 		final Injector injector = Guice.createInjector(customConfigurationModule());
 		injector.getInstance(PlantOverviewStarter.class).startPlantOverview();
 
-		final Injector injector2s = Guice.createInjector(new DbModule());
-		final BlockModelDao dao = injector2s.getInstance(BlockModelDao.class);
-		//        Block block = new Block();
-		//        block.setName("Hello World Blcok");
-		//        Member member =new Member();
-		//        member.setName("Sample member");
-		//        block.setMembers(Arrays.asList(member));
-		//        dao.saveInNewTransaction(block);
-		//
-		//
-		final Model model = dao.getObject();
-    List<Point> points= model.getPoints();
-		LOG.info("Init success {}", dao.getObject());
+//		final Injector injector2s = Guice.createInjector(new DbModule());
+//		final BlockModelDao dao = injector2s.getInstance(BlockModelDao.class);
+//		//        Block block = new Block();
+//		//        block.setName("Hello World Blcok");
+//		//        Member member =new Member();
+//		//        member.setName("Sample member");
+//		//        block.setMembers(Arrays.asList(member));
+//		//        dao.saveInNewTransaction(block);
+//		//
+//		//
+//		final Model model = dao.getObject();
+//    List<Point> points= model.getPoints();
+////		LOG.info("Init success {}", dao.getObject());
+//    LOG.info("Init success {}");
 	}
 
 	/**

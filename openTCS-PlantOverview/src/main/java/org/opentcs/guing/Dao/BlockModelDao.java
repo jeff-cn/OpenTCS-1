@@ -28,4 +28,11 @@ public class BlockModelDao {
 		return entityManager.createQuery("select e from Model e ", Model.class).getSingleResult();
 	}
 
+	public void deleteObject() {
+		entityManager.getTransaction().begin();
+		final Model model = getObject();
+		entityManager.remove(model);
+		entityManager.getTransaction().commit();
+	}
+
 }

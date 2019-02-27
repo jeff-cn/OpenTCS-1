@@ -41,4 +41,12 @@ public class AllowedOperation {
 		this.name = name;
 	}
 
+  public LocationType getLocationType() {
+    return locationType;
+  }
+
+  public void setLocationType(LocationType locationType) {
+    this.locationType = locationType;
+  }
+
 }

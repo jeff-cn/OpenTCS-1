@@ -240,27 +240,27 @@ public class OpenTCSModelManager
 
   @Override
   public boolean loadModel(@Nullable File modelFile) {
-    final Injector injector2s = Guice.createInjector(new DbModule());
-    final PlantModelTODao dao = injector2s.getInstance(PlantModelTODao.class);
-
-    final XmlModel xmlModel = dao.getObject();
-    String stringModel = xmlModel.getXmlData();
+//    final Injector injector2s = Guice.createInjector(new DbModule());
+//    final PlantModelTODao dao = injector2s.getInstance(PlantModelTODao.class);
+//
+//    final XmlModel xmlModel = dao.getObject();
+//    String stringModel = xmlModel.getXmlData();
 
     File file = new File(FILE_TEMP);
     if (file == null) {
       return false;
     }
-    try {
-      Files.deleteIfExists(file.toPath());
-
-      file.createNewFile();
-      PrintWriter out = new PrintWriter(FILE_TEMP);
-      out.println(stringModel);
-      out.close();
-    }
-    catch (IOException e) {
-
-    }
+//    try {
+//      Files.deleteIfExists(file.toPath());
+//
+//      file.createNewFile();
+//      PrintWriter out = new PrintWriter(FILE_TEMP);
+//      out.println(stringModel);
+//      out.close();
+//    }
+//    catch (IOException e) {
+//
+//    }
 
     FileFilter chosenFileFilter = modelReaderFileChooser.getFileFilter();
     return loadModel(file, modelReaderFilter.get(chosenFileFilter));

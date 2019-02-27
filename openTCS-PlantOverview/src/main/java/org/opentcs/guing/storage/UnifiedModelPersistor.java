@@ -41,6 +41,7 @@ import org.opentcs.util.persistence.models.XmlModel;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import static org.opentcs.util.PlantModelConverter.convertModelToPlantModelTO;
 
 /**
  * Synchronizes data kept in <code>ModelComponents</code> to a xml file.
@@ -122,19 +123,22 @@ implements ModelFilePersistor {
 				Charset.forName("UTF-8")))) {
 
 			final Injector injector2s = Guice.createInjector(new DbModule());
-			final PlantModelTODao dao = injector2s.getInstance(PlantModelTODao.class);
-			final XmlModel xmlModel = dao.getObject();
-			final StringWriter sw = new StringWriter();
-			plantModel.toXml(sw);
-			final String xmlString = sw.toString();
-			xmlModel.setXmlData(xmlString);
-			dao.saveInNewTransaction(xmlModel);
+//			final PlantModelTODao dao = injector2s.getInstance(PlantModelTODao.class);
+//			final XmlModel xmlModel = dao.getObject();
+//			final StringWriter sw = new StringWriter();
+//			plantModel.toXml(sw);
+//			final String xmlString = sw.toString();
+//			xmlModel.setXmlData(xmlString);
+//			dao.saveInNewTransaction(xmlModel);
 			plantModel.toXml(writer);
 
 			final Model model = convertPlantModelTOtoDbModel(plantModel);
 			//			model.setBlocks(null);
+      
 			final BlockModelDao blockModelDao = injector2s.getInstance(BlockModelDao.class);
+      blockModelDao.deleteObject();
 			blockModelDao.saveInNewTransaction(model);
+    
 		}
 	}
 }
